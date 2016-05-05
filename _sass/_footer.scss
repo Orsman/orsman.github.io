@@ -1,0 +1,102 @@
+
+footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 2rem 2rem 1rem 2rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  p {
+    font-size: 14px;
+  }
+}
+
+.bottom-footer {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding-top: 1rem;
+  text-transform: uppercase;
+}
+
+.lets-be-friends {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: $mobile-breakpoint) {
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.social-media {
+  padding-left: 0;
+  text-align: center;
+
+  li {
+    display: inline-block;
+  }
+
+  li a {
+    font-size: 28px;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    color: #dedede;
+  }
+
+  li a:hover {
+    color: $brand-color;
+  }
+}
+
+#heart {
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    animation: pulse 1s infinite linear;
+
+    > svg {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        vertical-align: middle;
+
+        path {
+            fill: #f64242;
+        }
+    }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}

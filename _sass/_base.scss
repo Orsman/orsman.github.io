@@ -1,0 +1,124 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  font-family: $base-font-family;
+  font-size: 13px;
+  line-height: $base-line-height;
+  color: $text-color;
+
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}
+
+@media (min-width: 400px) {
+  html { font-size: 15px; }
+}
+
+@media (min-width: 500px) {
+  html { font-size: 16px; }
+}
+
+@media (min-width: 600px) {
+  html { font-size: 17px; }
+}
+
+@media (min-width: 700px) {
+  html { font-size: 18px; }
+}
+
+@media (min-width: 800px) {
+  html { font-size: 19px; }
+}
+
+@media (min-width: 900px) {
+  html { font-size: 20px; }
+}
+
+
+body {
+  margin: 0;
+  position: relative;
+}
+
+.main_wrapper {
+  position: relative;
+  min-height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media (min-width: $mobile-breakpoint) {
+  .main_wrapper {
+    padding-bottom: 8rem;
+  }
+}
+
+
+/**
+ * Wrapper
+ */
+// .wrapper {
+//   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+//   max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+//   margin-right: auto;
+//   margin-left: auto;
+//   padding-right: $spacing-unit;
+//   padding-left: $spacing-unit;
+//   @extend %clearfix;
+
+//   @include media-query($on-laptop) {
+//       max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+//       max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+//       padding-right: $spacing-unit / 2;
+//       padding-left: $spacing-unit / 2;
+//   }
+// }
+
+// Mobile presentation
+// ==============================
+.presentation {
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  max-width: 700px;
+  text-align: center;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $mobile-breakpoint) {
+  .presentation {
+    padding-top: 4rem;
+  }
+}
+
+
+// Icons
+// ==============================
+.icon {
+
+  > svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+
+    path {
+        fill: #D3D3D3;
+    }
+  }
+}

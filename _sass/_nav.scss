@@ -1,0 +1,46 @@
+
+nav {
+  margin: 0 auto;
+}
+
+nav > a {
+  display: block;
+  text-transform: uppercase;
+  padding: 1rem 1rem;
+
+  h3 {
+    font-size: 1.2rem;
+    display: inline-block;
+  }
+}
+
+#icon-arrow {
+  width: 20px;
+  height: 20px;
+  padding-right: 1rem;
+  vertical-align: middle;
+  margin-bottom: 2px;
+
+  path {
+    fill: $brand-color;
+  }
+}
+
+@media (min-width: $mobile-breakpoint) {
+  nav > a {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+
+    h3 {
+      font-size: .8rem;
+    }
+  }
+}
+
+
+@media (min-width: 1160px) {
+  nav > a {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "books": [
+    {
+      "title": "Who Moved My Cheese?",
+      "author": "Dr. Spencer Johnson",
+      "img": "who-moved-my-cheese.jpg",
+      "review": "The world is always changing. Never let fear of change decide how you are going to live."
+    },
+    {
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "img": "the-alchemist.jpg",
+      "review": "About a boy who is determined to find and follow his purpose in life. Should be read at least two times. The underlining messages will sink in better the second time."
+    },
+    {
+      "title": "I am Zlatan",
+      "author": "Zlatan Ibrahimovic",
+      "img": "i-am-zlatan.jpg",
+      "review": "Confidence and narcissism gives you the persistence to go for what you want and not stop until you achieve it."
+    },
+    {
+      "title": "Between A Rock And A Hard Place (127 hours)",
+      "author": "Aron Rolston",
+      "img": "between-a-rock-and-a-hard-place.jpg",
+      "review": "Eyeopening and fascinating on what our body can do to survive. We can push ourselves beyond limits we never new existed."
+    },
+    {
+      "title": "The Dip",
+      "author": "Seth Godin",
+      "img": "the-dip.jpg",
+      "review": "Short book with mind-blowing content. Being number one will give you serious benefits. This book is a must read."
+    },
+    {
+      "title": "The Art of Non-Conformity",
+      "author": "Chris Guillebeau",
+      "img": "the-art-of-non-conformity.jpg",
+      "review": ""
+    },
+    {
+      "title": "Scar Tissue",
+      "author": "Anthony Keidis",
+      "img": "scar-tissue.jpg",
+      "review": "Constant drug abuse in the first half of the book. The later half was a mix of in-and-out of rehab, song writing and girls. Too much shooting-up-coke-and-herion-by-him-self-in-a-hotel-room and too little crazy adventures with his band members."
+    },
+    {
+      "title": "The 7 Habits of Highly Effective People",
+      "author": "Steven R. Covey",
+      "img": "the-7-habits.jpg",
+      "review": ""
+    },
+    {
+      "title": "The Viking Manifesto",
+      "author": "Steve Strid & Claes Andréassen",
+      "img": "the-viking-manifesto.jpg",
+      "review": "Forget marketing. Build the best product or service you can do, and the marketing will handle itself. And the better the story the less you have to spend on buying media."
+    },
+    {
+      "title": "Total Recall",
+      "author": "Arnold Schwarzenegger",
+      "img": "total-recall.jpg",
+      "review": "This dude has some serious work ethic. Three careers. Became world-class in all of them. One of the best biographies I’ve read."
+    },
+    {
+      "title": "The Dirt",
+      "author": "Neil Strauss",
+      "img": "the-dirt.jpg",
+      "review": "Entertaining biography about one of the biggest rock band in the 80s. Packed with crazy stories. Great read on 'how to learn to do whatever comes into your mind and not care about the consequences'."
+    }
+  ]
+}

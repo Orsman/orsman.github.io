@@ -1,0 +1,108 @@
+---
+layout: post
+title:  "JavaScript Code Styling (JSCS)"
+date:   2016-05-01 22:43:19 +0200
+permalink: /setting-up-jscs
+---
+When many developers are working in the same JavaScript-project, keeping the code clean and maintainable can sometimes be a hassle. Everybody have their own style and liking of how to write JS-code, what editor to use and may or may not use linters.
+
+That why it’s great to set up common team rules of how to write the JS-code. To get help with all these rules and make them correct the code, We’re using JavaScript Code Styling.
+I've used this in several projects with a lot of success. Opening up the project and all files look the same no matter how many developers are working on the project is great.
+
+An example of what JSCS can do for your code:
+
+Before
+
+<img>
+
+After
+
+<img>
+
+So, let’s go though the steps on how to install JSCS on your machine. First we’re going to install it and set it up with your IDE. Then, we set the rules. JSCS is an npm package and can be installed via the terminal:
+
+```shell
+npm install -g jscs
+```
+
+It can also be installed locally. But doing installing it globally on your machine will make it available for usage of any plugin in your IDE. I’m personally using Sublime Text 3 so the following installation takes place inside that editor.
+
+Install these packages via package control:
+
++ SublimeLinter
++ SublimeLinter-jscs
++ JSCS-Formatter
+
+Next this we’re going to do… Set up the rules!
+
+JSCS support tons of rules. And you can specify in greater details how you want your and your teams code to be written. If you don’t want to do that, you can choose between any of the presets that exist.
+
++ Airbnb
++ Wikimedia
++ Grunt
++ Crockford
++ Idiomatic
++ jQuery
++ Google
++ Wordpress
+
+Create a file and name it .jscsrc and put it in the root folder of the project. This is our configuration file where we’re going to set all the rules.
+
+Down below is the one I use. Head over to http://jscs.info/rules for an explanation of what each and one of them. Luckily, many of them are self-explanatory.
+
+{% highlight json %}
+{
+    "disallowSpacesInsideObjectBrackets": true,
+    "disallowTrailingComma": true,
+    "disallowSpaceAfterObjectKeys": true,
+    "disallowEmptyBlocks": true,
+    "disallowNewlineBeforeBlockStatements": true,
+    "disallowMixedSpacesAndTabs": true,
+    "disallowMultipleLineBreaks": true,
+    "disallowMultipleLineStrings": true,
+    "disallowMultipleSpaces": true,
+    "disallowTrailingWhitespace": true,
+    "disallowSpacesInsideParentheses": true,
+    "disallowSpacesInNamedFunctionExpression": {
+        "beforeOpeningRoundBrace": true
+    },
+    "disallowSpacesInFunctionExpression": {
+        "beforeOpeningRoundBrace": true
+    },
+    "disallowSpacesInAnonymousFunctionExpression": {
+        "beforeOpeningRoundBrace": true
+    },
+    "disallowSpacesInFunctionDeclaration": {
+        "beforeOpeningRoundBrace": true
+    },
+    "requireSpacesInFunctionDeclaration": {
+        "beforeOpeningCurlyBrace": true
+    },
+    "disallowSpaceAfterPrefixUnaryOperators": true,
+    "requireBlocksOnNewline": 1,
+    "requireCurlyBraces": ["if", "else", "for", "while", "do", "try", "catch"],
+    "requireSpaceAfterKeywords": ["if", "else", "for", "while", "do", "switch", "return", "try", "catch"],
+    "requireSpaceBeforeBinaryOperators": true,
+    "requireSpaceAfterBinaryOperators": true,
+    "requireSpaceBeforeKeywords": ["if", "else", "for", "while", "do", "switch", "return", "try", "catch"],
+    "requireSpaceBeforeBlockStatements": true,
+    "requireSpacesInForStatement": true,
+    "requireSpacesInFunctionExpression": {
+        "beforeOpeningCurlyBrace": true
+    },
+    "requireSpaceBetweenArguments": true,
+    "requirePaddingNewLinesAfterUseStrict": true,
+    "requireSpaceBeforeObjectValues": true,
+    "requireSpacesInConditionalExpression": true,
+    "requireParenthesesAroundIIFE": true,
+    "validateIndentation": 2,
+    "validateParameterSeparator": ", ",
+    "requireDotNotation": true,
+
+    "requirePaddingNewLinesBeforeLineComments": {
+        "allExcept": "firstAfterCurly"
+    },
+    "requirePaddingNewLineAfterVariableDeclaration": true,
+    "validateQuoteMarks": "'"
+}
+{% endhighlight %}

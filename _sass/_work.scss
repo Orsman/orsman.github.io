@@ -1,0 +1,105 @@
+
+.work-experience,
+.work-experience * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.work-experience {
+  padding-top: 2rem;
+  padding-left: 2rem;
+}
+
+.work-experience li {
+  list-style-type: none;
+  position: relative;
+  padding-left: 3rem;
+  padding-bottom: 3rem;
+
+  time {
+    font-size: 12px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  strong {
+    display: block;
+  }
+
+  a {
+    font-size: .9rem;
+    font-weight: 600;
+  }
+}
+
+.work-experience li .bullet {
+  position: absolute;
+  top: 10px;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: #d1d1d1;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -5px;
+    width: 11px;
+    height: 11px;
+    background: #ddd;
+    border-radius: 50%;
+  }
+}
+
+.work-experience li.current .bullet:before { background: $brand-color; }
+
+.work-experience li:last-child .bullet {
+  background: -webkit-linear-gradient(#d1d1d1, #fff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#d1d1d1, #fff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#d1d1d1, #fff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#d1d1d1, #fff); /* Standard syntax */
+}
+
+.companies-worked-with {
+  text-align: justify;
+  font-size: 0.1px;
+  padding-left: 0;
+  margin: 0 auto;
+  max-width: 900px;
+
+  li {
+    display: inline-block;
+    max-width: 150px;
+    width: 100%;
+    height: 100px;
+  }
+
+  &:after {
+    display: inline-block;
+    content: '';
+    width: 100%;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .stormfors {
+    background-image: url(../assets/stormfors.svg);
+  }
+  .instabridge {
+    background-image: url(../assets/instabridge.png);
+  }
+  .mediaplanet {
+    background-image: url(../assets/mediaplanet.png);
+  }
+}

@@ -1,0 +1,49 @@
+
+$plate:     #d9d0a3;
+$cup:       #f3e9c2;
+$steam:     #d6d6d6;
+
+
+@media (min-width: $mobile-breakpoint) {
+  #article-404 {
+    padding-top: 6rem;
+  }
+}
+
+#cup-of-coffee {
+  position: relative;
+  height: 160px;
+  width: 85px;
+  margin-right: auto;
+  margin-left: auto;
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: transparent;
+    width: 6px;
+    height: 6px;
+    box-shadow: 19px 0 fade($steam, 41%), 49px 0 fade($steam, 41%),
+                19px 6px fade($steam, 54%), 49px 6px fade( $steam, 54%),
+                13px 12px fade($steam, 67%), 43px 12px fade($steam, 67%),
+                13px 18px fade($steam, 80%), 43px 18px fade($steam, 80%),
+                19px 24px $steam, 49px 24px $steam,
+                19px 30px $steam, 49px 30px $steam,
+                13px 36px $steam, 43px 36px $steam,
+                13px 42px $steam, 43px 42px $steam,
+                -5px 54px $cup, 1px 54px $cup, 7px 54px $cup, 13px 54px $cup, 19px 54px $cup, 25px 54px $cup, 31px 54px $cup, 37px 54px $cup, 43px 54px $cup, 49px 54px $cup, 55px 54px $cup, 55px 54px $cup, 61px 54px $cup,
+                -5px 60px $cup, 1px 60px $cup, 7px 60px $cup, 13px 60px $cup, 19px 60px $cup, 25px 60px $cup, 31px 60px $cup, 37px 60px $cup, 43px 60px $cup, 49px 60px $cup, 55px 60px $cup, 55px 60px $cup, 61px 60px $cup, 67px 60px $cup, 73px 60px $cup,
+                -5px 66px $cup, 1px 66px $cup, 7px 66px $cup, 13px 66px $cup, 19px 66px $cup, 25px 66px $cup, 31px 66px $cup, 37px 66px $cup, 43px 66px $cup, 49px 66px $cup, 55px 66px $cup, 55px 66px $cup, 61px 66px $cup, 79px 66px $cup,
+                -5px 72px $cup, 1px 72px $cup, 7px 72px $cup, 13px 72px $cup, 19px 72px $cup, 25px 72px $cup, 31px 72px $cup, 37px 72px $cup, 43px 72px $cup, 49px 72px $cup, 55px 72px $cup, 55px 72px $cup, 61px 72px $cup, 79px 72px $cup,
+                -5px 78px $cup, 1px 78px $cup, 7px 78px $cup, 13px 78px $cup, 19px 78px $cup, 25px 78px $cup, 31px 78px $cup, 37px 78px $cup, 43px 78px $cup, 49px 78px $cup, 55px 78px $cup, 55px 78px $cup, 61px 78px $cup, 79px 78px $cup,
+                -5px 84px $cup, 1px 84px $cup, 7px 84px $cup, 13px 84px $cup, 19px 84px $cup, 25px 84px $cup, 31px 84px $cup, 37px 84px $cup, 43px 84px $cup, 49px 84px $cup, 55px 84px $cup, 55px 84px $cup, 61px 84px $cup, 67px 84px $cup, 73px 84px $cup,
+                -5px 90px $cup, 1px 90px $cup, 7px 90px $cup, 13px 90px $cup, 19px 90px $cup, 25px 90px $cup, 31px 90px $cup, 37px 90px $cup, 43px 90px $cup, 49px 90px $cup, 55px 90px $cup, 55px 90px $cup, 61px 90px $cup,
+                -5px 96px $cup, 1px 96px $cup, 7px 96px $cup, 13px 96px $cup, 19px 96px $cup, 25px 96px $cup, 31px 96px $cup, 37px 96px $cup, 43px 96px $cup, 49px 96px $cup, 55px 96px $cup, 55px 96px $cup, 61px 96px $cup,
+                1px 102px $cup, 7px 102px $cup, 13px 102px $cup, 19px 102px $cup, 25px 102px $cup, 31px 102px $cup, 37px 102px $cup, 43px 102px $cup, 49px 102px $cup, 55px 102px $cup,
+                7px 108px $cup, 13px 108px $cup, 19px 108px $cup, 25px 108px $cup, 31px 108px $cup, 37px 108px $cup, 43px 108px $cup, 49px 108px $cup,
+                13px 114px $cup, 19px 114px $cup, 25px 114px $cup, 31px 114px $cup, 37px 114px $cup, 43px 114px $cup,
+                -5px 120px $plate, 1px 120px $plate, 7px 120px $plate, 13px 120px $plate, 19px 120px $plate, 25px 120px $plate, 31px 120px $plate, 37px 120px $plate, 43px 120px $plate, 49px 120px $plate, 55px 120px $plate, 61px 120px $plate,
+                1px 126px $plate, 7px 126px $plate, 13px 126px $plate, 19px 126px $plate, 25px 126px $plate, 31px 126px $plate, 37px 126px $plate, 43px 126px $plate, 49px 126px $plate, 55px 126px $plate;
+  }
+}

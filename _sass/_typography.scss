@@ -1,0 +1,86 @@
+
+/* Typography
+============================== */
+
+p {
+  font-size: 16px;
+  line-height: 1.75em;
+  letter-spacing: 0.01rem;
+}
+
+@media (min-width: $mobile-breakpoint) {
+  p { font-size: 19px; }
+}
+
+h1, h2, h3 {
+  font-family: 'Source Sans Pro';
+  font-weight: 900;
+}
+
+h1 {
+  position: relative;
+  font-size: 2rem;
+  line-height: 1.25em;
+  margin-top: 0;
+  padding-bottom: .75em;
+  margin-bottom: .75em;
+}
+
+h1:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 150px;
+  background-color: $brand-color;
+}
+
+.presentation h1:after {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: .25em;
+}
+
+h3 {
+  font-size: .8rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+
+/**
+ * Links
+ */
+a {
+  color: $brand-color;
+  text-decoration: none;
+  font-weight: 700;
+  -webkit-transition: opacity .25s ease;
+  transition: opacity .25s ease;
+
+  &:hover {
+      color: $text-color;
+  }
+}
+
+
+em {
+  font-style: italic;
+}
+
+::-webkit-selection {
+  background-color: #333;
+  color: #fff;
+}
+
+::selection {
+  background-color: #333;
+  color: #fff;
+}
