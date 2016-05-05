@@ -2,11 +2,11 @@
  * Syntax highlighting styles
  */
 .highlight {
-    // background: #fdfdfd;
+    background: $code-background;
     margin-bottom: $spacing-unit / 2;
 
     .highlighter-rouge {
-      background: #eef;
+      background: $code-background;
     }
 
     .c     { color: #998; font-style: italic } // Comment
