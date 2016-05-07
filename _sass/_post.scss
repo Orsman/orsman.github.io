@@ -102,14 +102,17 @@ li {
       text-decoration: underline;
     }
   }
-
-  span {
-    font-size: .8rem;
-  }
 }
 
 .post-meta {
   margin-bottom: 0;
+}
+
+.post {
+
+  a {
+    text-decoration: underline;
+  }
 }
 
 

@@ -8,51 +8,52 @@
   flex-wrap: wrap;
   justify-content: space-between;
   list-style-type: none;
-}
 
-.list-of-books li {
-  width: 30%;
-  text-align: left;
-  margin-bottom: 3rem;
-  vertical-align: top;
-  min-height: 100px;
-  &.purple { background-color: $brand-color; }
-}
-
-.list-of-books:after {
-  content: '';
-  display: inline-block;
-  width: 100%;
-}
-
-.list-of-books figure {
-  position: relative;
-  margin-bottom: 0;
-
-  img {
-    max-height: 200px;
+  li {
+    width: 30%;
+    text-align: left;
+    margin-bottom: 3rem;
+    vertical-align: top;
+    min-height: 100px;
+    &.purple { background-color: $brand-color; }
   }
 
-  /* pseudo-element to dim the image a bit */
   &:after {
-    position: absolute;
     content: '';
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(255, 255, 255, 0.25);
+    display: inline-block;
+    width: 100%;
+  }
+
+
+  figure {
+    position: relative;
+    margin-bottom: 0;
+
+    img {
+      max-height: 200px;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+  }
+
+  h3 {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  h2 + p {
+    margin-top: 0;
   }
 }
 
-.list-of-books h2 {
-  margin-top: 1rem;
-  margin-bottom: 0;
-}
-
-.list-of-books h2 + p {
-  margin-top: 0;
-}
 
 @media (max-width: 800px) {
   .list-of-books li {

@@ -11,14 +11,35 @@ I've used this in several projects with a lot of success. Opening up the project
 
 An example of what JSCS can do for your code:
 
-Before
+**Before:**
 
-<img>
+{% highlight javascript %}
+var itemsArray= [{name:"Johan",age:"34" },{name:'Henrik',  age:'42'}];
+if(!itemsArray.length)
+    return true;
+for(var i=0;i< itemsArray.length;i++) {
+    totalAge+=itemsArray[i].age+ageFactor;
+}
 
-After
+{% endhighlight %}
 
-<img>
+**After:**
 
+{% highlight javascript %}
+var itemsArray = [{name:'Johan', age:'34'}, {name: 'Henrik', age:'42'}];
+
+if (!itemsArray.length) {
+    return true;
+}
+
+for(var i = 0; i < itemsArray.length; i++) {
+    totalAge += itemsArray[i].age + ageFactor;
+}
+{% endhighlight %}
+
+This might look like no biggie. But when you are working in a big team the code baseif huge, it will be messy. Therefore it great to set up rules for how the javascript will be written. The biggest benefit it that their will me space, breathing room in the code. Making it more readable.
+
+### Get it on your machine
 So, let’s go though the steps on how to install JSCS on your machine. First we’re going to install it and set it up with your IDE. Then, we set the rules. JSCS is an npm package and can be installed via the terminal:
 
 ```shell
@@ -34,20 +55,17 @@ Install these packages via package control:
 + JSCS-Formatter
 
 ### Setting the rules
-JSCS support tons of rules. And you can specify in greater details how you want your and your teams code to be written. If you don’t want to do that, you can choose between any of the presets that exist.
+JSCS support tons of rules. And you can specify in greater details how you want your and your teams code to be written. If you don’t want to do that, you can choose between any of the presets that exist. For ex:
 
 + Airbnb
-+ Wikimedia
 + Grunt
-+ Crockford
-+ Idiomatic
 + jQuery
 + Google
 + Wordpress
 
-Create a file and name it .jscsrc and put it in the root folder of the project. This is our configuration file where we’re going to set all the rules.
+Create a file and name it ```.jscsrc``` and put it in the root folder of the project. This is our configuration file where we’re going to set all the rules.
 
-Down below is the one I use. Head over to http://jscs.info/rules for an explanation of what each and one of them. Luckily, many of them are self-explanatory.
+Down below is the one I use. Head over to [http://jscs.info/rules](http://jscs.info/rules) for an explanation of what each and one of them. Luckily, many of them are self-explanatory.
 
 {% highlight json %}
 {

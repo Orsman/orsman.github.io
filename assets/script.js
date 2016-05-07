@@ -1,4 +1,3 @@
-
 if (document.addEventListener ) {
     document.addEventListener('DOMContentLoaded', excuteDomReadyCallBacks, false);
 }

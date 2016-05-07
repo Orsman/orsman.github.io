@@ -11,8 +11,8 @@ title:  "My bookshelf"
       <figure>
         <img src="../assets/books/{{ book.img }}" alt="{{ book.title }} - {{ book.author }}">
       </figure>
-      <h2>{{ book.title }}</h2>
-      <h3>{{ book.author }}</h3>
+      <h3>{{ book.title }}</h3>
+      <h4>{{ book.author }}</h4>
       <p>{{ book.review }}</p>
     </li>
     {% endfor %}

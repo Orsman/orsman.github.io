@@ -1,3 +1,9 @@
+{% if page.layout == "post" %}
 <nav>
-  <a href="/" id="return_link">{% include icon-arrow.svg %}<h3>return to start page</h3></a>
+  <a href="/blog" id="return_link">{% include icon-arrow.svg %}<h3>Return to blog page</h3></a>
 </nav>
+{% else %}
+<nav>
+  <a href="/" id="return_link">{% include icon-arrow.svg %}<h3>Return to start page</h3></a>
+</nav>
+{% endif %}
