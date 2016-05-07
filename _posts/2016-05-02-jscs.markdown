@@ -6,7 +6,7 @@ permalink: /blog/setting-up-jscs
 ---
 When many developers are working in the same JavaScript-project, keeping the code clean and maintainable can sometimes be a hassle. Everybody have their own style and liking of how to write JS-code, what editor to use and may or may not use linters.
 
-That why it’s great to set up common team rules of how to write the JS-code. To get help with all these rules and make them correct the code, We’re using JavaScript Code Styling.
+That why it’s great to set up team rules of how to write the JS-code. And, for them to be used, they need to be automated. It cannot only and up on the company wiki that no one reads. We new automation. To get help with all these rules and make them correct the code, We’re using JavaScript Code Styling.
 I've used this in several projects with a lot of success. Opening up the project and all files look the same no matter how many developers are working on the project is great.
 
 An example of what JSCS can do for your code:
@@ -37,24 +37,32 @@ for(var i = 0; i < itemsArray.length; i++) {
 }
 {% endhighlight %}
 
-This might look like no biggie. But when you are working in a big team the code baseif huge, it will be messy. Therefore it great to set up rules for how the javascript will be written. The biggest benefit it that their will me space, breathing room in the code. Making it more readable.
+What main functionality of JSCS is that it creates spacing at the right places. More breathing room in the code, and the readability will be enhanced.
 
 ### Get it on your machine
-So, let’s go though the steps on how to install JSCS on your machine. First we’re going to install it and set it up with your IDE. Then, we set the rules. JSCS is an npm package and can be installed via the terminal:
+So, let’s go though the steps on how to install JSCS on your machine. First we need to install it globally. JSCS is an npm package and can be installed via the terminal ([npmjs.com](http://npmjs.com)):
 
 ```shell
 npm install -g jscs
 ```
 
-It can also be installed locally. But doing installing it globally on your machine will make it available for usage of any plugin in your IDE. I’m personally using Sublime Text 3 so the following installation takes place inside that editor.
+Now you can start using it on your files.
 
-Install these packages via package control:
+```shell
+jscs path/to/the/file.js
+```
+
+Checking all files in the terminal will be very inefficent though. A better way is to install plugins in your IDE that automatically will import your rules and immediately apply them and check your code. And even better, if there is a shortcommand that will change the file according to your rules.
+
+I personally use Sublime Text 3 and these are the packages that needs to be installed (via package control):
 
 + SublimeLinter
 + SublimeLinter-jscs
 + JSCS-Formatter
 
-### Setting the rules
+**JSCS-Formatter** is pure awesome sauce. With a short command (or on save) it applies all your rules and changes the file, if necessary. I personally only use the short command. Otherwise Sublime will throw an error each time I save in a project without a ```.jscsrc``` file.
+
+### Let's set the rules!
 JSCS support tons of rules. And you can specify in greater details how you want your and your teams code to be written. If you don’t want to do that, you can choose between any of the presets that exist. For ex:
 
 + Airbnb

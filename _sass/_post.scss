@@ -23,11 +23,8 @@ article > figure {
   display: block;
   width: calc(100% + 3rem);
   margin: 2rem -1.5rem;
-}
 
-@media (min-width: 700px) {
-  article > img,
-  article > figure {
+  @media (min-width: 700px) {
     margin: 3rem -60px;
     width: 820px;
   }
@@ -97,22 +94,11 @@ li {
     color: $text-color;
     margin-bottom: $spacing-unit;
     transition: color 250ms ease;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 }
 
 .post-meta {
   margin-bottom: 0;
-}
-
-.post {
-
-  a {
-    text-decoration: underline;
-  }
 }
 
 
