@@ -4,7 +4,7 @@ title:  "Hello,"
 ---
 My name is Johan Forsman and I’m a front-end-developer. Currently living in Stockholm Sweden.
 
-Working on the internet developing digital experiences isnät something I’ve done my whole life nor dreamed about when I was a kid...
+Working on the internet developing digital experiences isn't something I’ve done my whole life nor dreamed about when I was a kid...
 
 Not knowing what to do with my life in my early twenties lead me in to the university and Economics. Even if it wasn’t something I really wanted to do, it at least didn’t feel like wasted time. Economics is always good to know right? But at the end of studies I realised this was not the direction I wanted (nor was ready) to take in my life. Having a regular day job and just working through my life, was not appealing. My biggest concern was that there were so many things I wanted to do in my life and so little time. Time that I could waste doing something “ok”.
 
