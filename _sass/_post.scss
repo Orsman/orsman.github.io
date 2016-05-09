@@ -75,7 +75,7 @@ blockquote {
  * Lists
  */
 ul, ol {
-  margin-left: $spacing-unit;
+  margin-left: $spacing-unit / 2;
 }
 
 li {
@@ -94,6 +94,15 @@ li {
     color: $text-color;
     margin-bottom: $spacing-unit;
     transition: color 250ms ease;
+  }
+}
+
+.post-content li {
+  list-style-type: none;
+
+  &:before {
+    content: '+';
+    padding-right: .75rem;
   }
 }
 
