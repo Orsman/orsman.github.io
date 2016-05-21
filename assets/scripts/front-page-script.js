@@ -1,11 +1,10 @@
-if (document.addEventListener ) {
+if (document.addEventListener) {
     document.addEventListener('DOMContentLoaded', excuteDomReadyCallBacks, false);
 }
 
 function excuteDomReadyCallBacks() {
 
     setTimeout(function() {
-        document.body.className = 'dom_ready';
-
+        document.body.classList.add('dom_ready');
     }, 500);
 }

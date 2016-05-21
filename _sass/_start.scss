@@ -186,7 +186,7 @@
 #work,
 #bookshelf,
 #about-me,
-#workout {
+#blog {
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -210,13 +210,16 @@
   }
 }
 
-#tdbid:before,
+#blog:before,
 #about-me:before {
   opacity: .1;
 }
 
-#bookshelf:before,
-#workout:before {
+#tdbid:before {
+  opacity: .2;
+}
+
+#bookshelf:before {
   opacity: .3;
 }
 
@@ -225,7 +228,7 @@
 }
 
 #tdbid {
-  background-image: url(../assets/flight.jpg);
+  background-image: url(../assets/road-trip.png);
 }
 
 #about-me {
@@ -236,6 +239,6 @@
   background-image: url(../assets/coding.png);
 }
 
-#workout {
-  background-image: url(../assets/running.jpg);
+#blog {
+  background-image: url(../assets/flight.jpg);
 }

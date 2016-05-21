@@ -64,6 +64,7 @@
   background: linear-gradient(#d1d1d1, #fff); /* Standard syntax */
 }
 
+.frameworks-used,
 .companies-worked-with {
   text-align: justify;
   font-size: 0.1px;
@@ -73,9 +74,10 @@
 
   li {
     display: inline-block;
-    max-width: 150px;
     width: 100%;
     height: 100px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   &:after {
@@ -86,11 +88,22 @@
 
   a {
     display: block;
-    width: 100%;
+    width: 50%;
     height: 100%;
+    margin: 0 auto;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+  }
+
+  .angular {
+    background-image: url(../assets/angular.png);
+  }
+  .gulp {
+    background-image: url(../assets/gulp.png);
+  }
+  .sass {
+    background-image: url(../assets/sass.svg);
   }
 
   .stormfors {
@@ -101,5 +114,29 @@
   }
   .mediaplanet {
     background-image: url(../assets/mediaplanet.png);
+  }
+}
+
+
+@media (min-width: $mobile-breakpoint) {
+
+  .frameworks-used li,
+  .companies-worked-with li {
+    max-width: 150px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    a {
+      width: 100%;
+    }
+  }
+
+  .frameworks-used {
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+  }
+
+  .companies-worked-with {
+
   }
 }

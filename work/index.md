@@ -37,6 +37,13 @@ title:  "My experience"
   </li>
 </ul>
 
+<p style="text-align:center;margin-top:60px;">Frameworks I use:</p>
+<ul class="frameworks-used">
+  <li><a class="angular" href="http://www.angular.io"></a></li>
+  <li><a class="gulp" href="http://gulpjs.com/"></a></li>
+  <li><a class="sass" href="http://sass-lang.com/"></a></li>
+</ul>
+
 <p style="text-align:center;margin-top:60px;">Companies I've worked with:</p>
 <ul class="companies-worked-with">
   <li><a class="stormfors" href="http://www.stormfors.com"></a></li>
