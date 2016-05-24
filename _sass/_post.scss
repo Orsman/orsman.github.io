@@ -30,6 +30,10 @@ article > figure {
   }
 }
 
+nav + article {
+  margin-top: 48px;
+}
+
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -58,12 +62,14 @@ figcaption {
  * Blockquotes
  */
 blockquote {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
+  color: lighten($brand-color, 20%); //$grey-color;
+  border-left: 4px solid lighten($brand-color, 35%); //$grey-color-light;
   padding-left: $spacing-unit / 2;
   font-size: 18px;
   letter-spacing: -1px;
   font-style: italic;
+  margin-top: $spacing-unit;
+  margin-bottom: $spacing-unit;
 
   > :last-child {
     margin-bottom: 0;

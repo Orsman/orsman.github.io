@@ -2,10 +2,16 @@
 layout: page
 title:  "TDBID*"
 ---
-While I was writing my thesis on economics, I also wrote a list of things I wanted to to in my life. With no boundaries in mind I wrote down something that since that day have guided me, both career wise and in general. If the items on that list is stuff I really want to do and experience, why shouldn’t I do everything I can to achieve it? Why choose to do something else, that’s less fun?
+As I mentioned [here](/about "About me"), in 2009 I wrote down a list of everything I wanted to do in my life. Everything. Even though some of the items on that list felt far away, I realised that all of it could be achieved and experienced. The only thing that was between me and all those things was hard work and dedication.
 
-That question have drove me to tick things of the list. And add more. You can argue that having a checklist is stupid and only makes you chase things. I see it a bit different. This is just a guide and a reminder of living my life on my own terms. Not getting to caught up in a daze where the days just passes by.
+Since then, this list have guided me in my life. If I don’t look at this list regularly I tend to just get caught up in the everyday grind. Weeks and months passes by and I haven’t come any closer to my dreams. A question i tend to ask myself very often is:
+
+> “Ok, so this is things I dreaming of. Why shouldn’t I do everything I can to make it happen?“
+
+That question drives me to put in all the hard work.
+
+It’s important to emphasise that this isn’t about just ticking things of a list. It’s more of a guide and reminder of were I want to go in life. What I once wanted to do. And still do.
+
+To me life is about experience moments and adventures. Not possession. And this whole bucket list thing for me can be summarised in; Being the best possible version of myself, experience life while I can, and live consciously.
 
 ![The World](/assets/map.png "The World")
-
-* To Do Before I Die

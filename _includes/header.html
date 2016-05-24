@@ -1,9 +1,20 @@
 {% if page.layout == "post" %}
-<nav>
-  <a href="/blog" id="return_link">{% include icon-arrow.svg %}<h3>Return to blog page</h3></a>
+<nav class="top">
+    <a id="return_link" href="/blog">{% include icon-arrow.svg %}<h3>Return to blog page</h3></a>
+    <a id="menu_link" rel="nofollow"><h3>Menu</h3><div id="hamburger"></div></a>
+</nav>
+<nav class="top fixed">
+    <a id="return_link" href="/blog">{% include icon-arrow.svg %}<h3>Return to blog page</h3></a>
+    <a id="menu_link" rel="nofollow"><h3>Menu</h3><div id="hamburger"></div></a>
 </nav>
 {% else %}
-<nav>
-  <a href="/" id="return_link">{% include icon-arrow.svg %}<h3>Return to start page</h3></a>
+<nav class="top">
+    <a id="return_link" href="/">{% include icon-arrow.svg %}<h3>Return to start page</h3></a>
+    <a id="menu_link" rel="nofollow"><h3>Menu</h3><div id="hamburger"></div></a>
+</nav>
+
+<nav class="top fixed">
+    <a id="return_link" href="/">{% include icon-arrow.svg %}<h3>Return to start page</h3></a>
+    <a id="menu_link" rel="nofollow"><h3>MenuMenu</h3><div id="hamburger"></div></a>
 </nav>
 {% endif %}

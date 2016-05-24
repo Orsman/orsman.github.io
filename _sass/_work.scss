@@ -106,6 +106,10 @@
     background-image: url(../assets/sass.svg);
   }
 
+  .magic {
+    background-image: url(../assets/magic.png);
+  }
+
   .stormfors {
     background-image: url(../assets/stormfors.svg);
   }
@@ -115,6 +119,10 @@
   .mediaplanet {
     background-image: url(../assets/mediaplanet.png);
   }
+
+  .bitrefill {
+    background-image: url(../assets/bitrefill.png);
+  }
 }
 
 
@@ -122,11 +130,12 @@
 
   .frameworks-used li,
   .companies-worked-with li {
-    max-width: 150px;
-    padding-top: 0;
-    padding-bottom: 0;
+    width: 33%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
     a {
+      max-width: 150px;
       width: 100%;
     }
   }
