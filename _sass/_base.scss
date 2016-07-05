@@ -59,10 +59,19 @@ aside {
   transition: transform 300ms ease;
   background-color: #f1f2f1;
   padding-top: $spacing-unit * 2;
+  overflow-y: scroll;
+
+  .avatar {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px auto;
+    max-width: 150px;
+  }
 
   p {
     padding: 0 30px;
     line-height: 1.5em;
+    font-size: .9rem;
   }
 
   ul {
@@ -73,7 +82,7 @@ aside {
     list-style-type: none;
   }
 
-  a {
+  li a {
     display: block;
     width: 100%;
     padding: 15px 30px;

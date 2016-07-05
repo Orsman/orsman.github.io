@@ -6,6 +6,7 @@ nav.top {
   right: 0;
   margin: 0 auto;
   height: 48px;
+  z-index: 1;
 
   h3 {
     display: inline-block;
@@ -25,6 +26,18 @@ nav.top {
   display: inline-block;
   padding: 0 1rem;
   line-height: 46px;
+  position: relative;
+
+  .open-text,
+  .close-text {
+    position: absolute;
+    left: 0;
+    transition: opacity 300ms ease;
+    pointer-events: none;
+  }
+
+  .open-text { opacity: 1; }
+  .close-text { opacity: 0; }
 
   #hamburger {
     display: inline-block;
@@ -64,6 +77,14 @@ nav.top {
 
   @media (min-width: 1160px) {
     padding-left: 2rem;
-    padding-right: 2rem;
+    padding-right: $spacing-unit;
   }
+}
+
+#sidebar_chkbox:checked ~ nav .open-text {
+  opacity: 0;
+}
+
+#sidebar_chkbox:checked ~ nav .close-text {
+  opacity: 1;
 }
