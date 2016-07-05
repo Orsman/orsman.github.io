@@ -4,13 +4,24 @@
   {% include head.html %}
 
   <body>
-
     <div class="main_wrapper">
-      {% include header.html %}
+        <input id="sidebar_chkbox" type="checkbox">
+        {% include header.html %}
 
-      {{ content }}
+        <aside id="sidebar">
+            <p>Hello, </br>I'm Johan Forsman. A 31 year old swedish web developer, based in Stockholm.</p>
+            <ul>
+                <li><a href="/about">About me</a></li>
+                <li><a href="/books">Bookshelf</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/tdbid">TDBID</a></li>
+                <li><a href="/work">Work</a></li>
+            </ul>
+        </aside>
 
-      {% include footer.html %}
+        {{ content }}
+
+        {% include footer.html %}
     </div>
 
   </body>

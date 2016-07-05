@@ -1,39 +1,20 @@
 
-/* Typography
-============================== */
-
 p {
-  font-size: 16px;
   line-height: 1.75em;
   letter-spacing: 0.01rem;
 }
 
-@media (min-width: $mobile-breakpoint) {
-  p { font-size: 19px; }
-}
-
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   font-family: 'Source Sans Pro';
   font-weight: 900;
 }
 
 h1 {
   position: relative;
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 1.25em;
   margin-top: 0;
-  padding-bottom: .75em;
-  margin-bottom: .75em;
-}
-
-h1:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 3px;
-  width: 150px;
-  background-color: $brand-color;
+  margin-bottom: 0;
 }
 
 .presentation h1:after {
@@ -49,9 +30,9 @@ h2 {
 }
 
 h3 {
-  font-size: 1.2rem;
-  margin-top: 2rem;
-  margin-bottom: 0;
+  font-size: 1.5rem;
+  margin-top: $spacing-unit * 2;
+  margin-bottom: $spacing-unit / 2;
 }
 
 h4 {
@@ -59,20 +40,21 @@ h4 {
   font-size: .8em;
 }
 
-/**
- * Links
- */
+h5 {
+  font-size: 1em;
+  line-height: 1.25em;
+}
+
+
 a {
-  color: $brand-color;
+  color: $text-color;
   text-decoration: none;
-  font-weight: 700;
   -webkit-transition: opacity .25s ease;
   transition: opacity .25s ease;
   outline: none;
 
   &:hover {
-    text-decoration: underline;
-    color: $text-color;
+    text-decoration: none;
   }
 
   * {
@@ -80,17 +62,14 @@ a {
   }
 }
 
-
-em {
-  font-style: italic;
-}
-
 ::-webkit-selection {
   background-color: #333;
+  text-shadow: none;
   color: #fff;
 }
 
 ::selection {
   background-color: #333;
+  text-shadow: none;
   color: #fff;
 }

@@ -11,40 +11,41 @@ title:  "My experience"
     <div class="bullet"></div>
     <div class="row">
       <time class="column-1-2">February 2016 - Present</time>
-      <div class="column-1-2"><h2>Front End Developer</h2><a href="http://www.magicbyistone.se">magicbyistone.se</a></div>
+      <div class="column-1-2"><h5>Front End Developer</h5><a href="http://www.magicbyistone.se">magicbyistone.se</a></div>
     </div>
   </li>
   <li>
     <div class="bullet"></div>
     <div class="row">
       <time class="column-1-2">April 2014 - February 2016</time>
-      <div class="column-1-2"><h2>Front End Developer</h2><a href="http://www.prepaird.com">prepaird.com</a></div>
+      <div class="column-1-2"><h5>Front End Developer</h5><a href="http://www.prepaird.com">prepaird.com</a></div>
     </div>
   </li>
   <li>
     <div class="bullet"></div>
     <div class="row">
       <time class="column-1-2">January 2013 - March 2014</time>
-      <div class="column-1-2"><h2>Freelancer, Web Developer</h2><a href="http://johanhforsman.com">johanhforsman.com</a></div>
+      <div class="column-1-2"><h5>Freelancer, Web Developer</h5><a href="http://johanhforsman.com">johanhforsman.com</a></div>
     </div>
   </li>
   <li>
     <div class="bullet"></div>
     <div class="row">
       <time class="column-1-2">August 2012</time>
-      <div class="column-1-2"><h2>Began to learn coding</h2><a href="http://www.codecademy.com">codecademy.com</a></div>
+      <div class="column-1-2"><h5>Began to learn coding</h5><a href="http://www.codecademy.com">codecademy.com</a></div>
     </div>
   </li>
 </ul>
 
-<p style="text-align:center;margin-top:60px;">Frameworks I use:</p>
+<h3 style="text-align:center;margin-top:60px;">Tools 'n frameworks:</h3>
+<p>Currently, <a href="https://angular.io/" target="_blank">AngularJS</a> is my preferred client-side MVC framework as it is highly extensible and good at working with dynamic data. When writing CSS, I prefer using pre-processors such as <a class="sass" href="http://sass-lang.com/" target="_blank">SASS</a>, due to their cleaner syntax and wider functionality. I also use <a class="gulp" href="http://gulpjs.com/" target="_blank">gulp</a> as my javascript task runner.</p>
 <ul class="frameworks-used">
   <li><a class="angular" href="http://www.angular.io" target="_blank"></a></li>
   <li><a class="gulp" href="http://gulpjs.com/" target="_blank"></a></li>
   <li><a class="sass" href="http://sass-lang.com/" target="_blank"></a></li>
 </ul>
 
-<p style="text-align:center;margin-top:60px;">Companies I've worked with:</p>
+<h3 style="text-align:center;margin-top:60px;">Companies I've worked with:</h3>
 <ul class="companies-worked-with">
   <li><a class="magic" href="http://www.magicbyistone.se" target="_blank"></a></li>
   <li><a class="stormfors" href="http://www.stormfors.com" target="_blank"></a></li>

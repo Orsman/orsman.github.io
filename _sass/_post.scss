@@ -10,7 +10,8 @@
 article {
   margin: 0 auto;
   padding: 2rem 1.5rem;
-  max-width: 700px;
+  max-width: $content-width;
+  transition: transform 300ms ease;
 
   &.full-width {
     max-width: 1080px;
@@ -19,7 +20,8 @@ article {
 
 article > img,
 article > p > img,
-article > figure {
+article > figure,
+.post-content > p > img, {
   display: block;
   width: calc(100% + 3rem);
   margin: 2rem -1.5rem;
@@ -34,6 +36,14 @@ nav + article {
   margin-top: 48px;
 }
 
+.post-header {
+  margin-bottom: 1.5em;
+
+  .post-meta {
+    color: #808080;
+    font-style: italic;
+  }
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -42,7 +52,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: $spacing-unit;
 }
 
 
@@ -63,13 +73,14 @@ figcaption {
  */
 blockquote {
   color: lighten($brand-color, 20%); //$grey-color;
-  border-left: 4px solid lighten($brand-color, 35%); //$grey-color-light;
+  border-left: 2px solid lighten($brand-color, 35%); //$grey-color-light;
   padding-left: $spacing-unit / 2;
   font-size: 18px;
   letter-spacing: -1px;
   font-style: italic;
   margin-top: $spacing-unit;
   margin-bottom: $spacing-unit;
+  margin-left: $spacing-unit / 2;
 
   > :last-child {
     margin-bottom: 0;
@@ -95,11 +106,37 @@ li {
   list-style-type: none;
   margin-left: 0;
 
+  li {
+    margin-bottom: $spacing-unit;
+  }
+
   a {
     display: block;
     color: $text-color;
-    margin-bottom: $spacing-unit;
     transition: color 250ms ease;
+  }
+
+  span {
+    color: #808080;
+    font-style: italic;
+  }
+}
+
+.post-content a {
+  color: $text-color;
+  background-image: linear-gradient($text-color, $text-color);
+  background-size: 1px 1px;
+  background-repeat: repeat-x;
+  background-position: 0 1em;
+
+  text-shadow: .03em 0 #fff, -.03em 0 #fff, 0 .03em #fff, 0 -.03em #fff,
+               .06em 0 #fff, -.06em 0 #fff, .09em 0 #fff, -.09em 0 #fff,
+               .12em 0 #fff, -.12em 0 #fff, .15em 0 #fff, -.15em 0 #fff;
+
+  &:hover {
+    color: $text-color;
+    background-size: 2px 2px;
+    background-image: linear-gradient($brand-color, $brand-color);
   }
 }
 

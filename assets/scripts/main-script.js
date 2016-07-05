@@ -1,12 +1,17 @@
-(function() {
+(function(document) {
+    var toggle = document.querySelector('#menu_link');
+    var sidebar = document.querySelector('#sidebar');
+    var checkbox = document.querySelector('#sidebar_chkbox');
 
-    window.onscroll = function(event) {
-        if (window.scrollY > 60 ) {
-            document.body.classList.add('scrolled');
-        } else {
-            document.body.classList.remove('scrolled');
-        }
-    }
+    document.addEventListener('click', function(e) {
+        var target = e.target;
+
+        if(!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+
+        checkbox.checked = false;
+    }, false);
 
     setTimeout(function() {
         document.body.classList.add('fade-in');
@@ -34,4 +39,4 @@
         }, 400);
     }
 
-})();
+})(document);

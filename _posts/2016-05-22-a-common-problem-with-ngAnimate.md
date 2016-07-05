@@ -13,7 +13,7 @@ This usually creates an unwanted behavior with double animations. Stuff not beha
 Lately I had a problem where ngAnimate added classes to a multi-level menu, where I used css transitions to go back and forward in the menu. This resulted in choppy behaviour and the menu not looking 100% responsive to user actions.
 
 It took a while before I realised what was causing the issue. Doing as the snippet below will disable animation on the element the directive is added to and all its children.
-This can also be done on any other directive. Just inject $animate and add ```$animate.enabled(false, el)``` to the link-function.
+This can also be done on any other directive. Just inject $animate and add ```$animate.enabled(el, false)``` to the link-function.
 
 {% highlight javascript %}
 angular
@@ -25,7 +25,7 @@ angular
         }
 
         function link(scope, el) {
-            $animate.enabled(false, el);
+            $animate.enabled(el, false);
         }
     });
 }

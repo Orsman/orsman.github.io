@@ -30,6 +30,7 @@ body {
   height: 100%;
   opacity: 0;
   transition: opacity 400ms ease;
+  overflow-x: hidden;
 
   &.fade-in {
     opacity: 1;
@@ -45,7 +46,60 @@ body {
   min-height: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+
+  overflow: auto;
 }
+
+aside {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  width: 280px;
+  transition: transform 300ms ease;
+  background-color: #f1f2f1;
+  padding-top: $spacing-unit * 2;
+
+  p {
+    padding: 0 30px;
+    line-height: 1.5em;
+  }
+
+  ul {
+    margin-left: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    padding: 15px 30px;
+    font-family: 'Source Sans Pro';
+    font-weight: 900;
+    line-height: 1em;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+    letter-spacing: 1px;
+
+    &:hover {
+      background-color: rgba(0,0,0,.05);
+      border-color: transparent;
+    }
+  }
+}
+
+#sidebar_chkbox {
+  display: none;
+}
+
+#sidebar_chkbox:checked ~ #sidebar,
+#sidebar_chkbox:checked ~ article,
+#sidebar_chkbox:checked ~ footer {
+  transform: translateX(-280px);
+}
+
 
 @media (min-width: $mobile-breakpoint) {
   .main_wrapper {
@@ -98,28 +152,6 @@ body {
 //   }
 // }
 
-// Mobile presentation
-// ==============================
-.presentation {
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  max-width: 700px;
-  text-align: center;
-
-  p {
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width: $mobile-breakpoint) {
-  .presentation {
-    padding-top: 3rem;
-  }
-}
-
-
-// Icons
-// ==============================
 .icon {
 
   > svg {
@@ -131,5 +163,29 @@ body {
     path {
         fill: #D3D3D3;
     }
+  }
+}
+
+// Mobile presentation
+// ==============================
+.presentation {
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  max-width: $content-width + 100px;
+  text-align: center;
+
+  h1 {
+    margin-bottom: .5em;
+  }
+
+  p {
+    max-width: $content-width;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $mobile-breakpoint) {
+  .presentation {
+    padding-top: 3rem;
   }
 }

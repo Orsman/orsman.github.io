@@ -6,7 +6,7 @@ As I mentioned [here](/about "About me"), in 2009 I wrote down a list of everyth
 
 Since then, this list have guided me in my life. If I don’t look at this list regularly I tend to just get caught up in the everyday grind. Weeks and months passes by and I haven’t come any closer to my dreams. A question i tend to ask myself very often is:
 
-> “Ok, so this is things I dreaming of. Why shouldn’t I do everything I can to make it happen?“
+> “If these are the things I really want in my life, why shouldn’t I do everything I can to make it happen?“
 
 That question drives me to put in all the hard work.
 
