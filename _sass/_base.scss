@@ -1,6 +1,3 @@
-/**
- * Reset some basic elements
- */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -12,7 +9,7 @@ dl, dd, ol, ul, figure {
 html {
   height: 100%;
   font-family: $base-font-family;
-  font-size: 13px;
+  font-size: 15px;
   line-height: $base-line-height;
   color: $text-color;
 
@@ -28,16 +25,19 @@ body {
   margin: 0;
   position: relative;
   height: 100%;
-  opacity: 0;
   transition: opacity 400ms ease;
   overflow-x: hidden;
 
-  &.fade-in {
-    opacity: 1;
-  }
-
-  &.fade-out {
+  @media (min-width: 800px) {
     opacity: 0;
+
+    &.fade-in {
+      opacity: 1;
+    }
+
+    &.fade-out {
+      opacity: 0;
+    }
   }
 }
 
@@ -116,10 +116,6 @@ aside {
   }
 }
 
-@media (min-width: 400px) {
-  html { font-size: 15px; }
-}
-
 @media (min-width: 500px) {
   html { font-size: 16px; }
 }
@@ -190,11 +186,10 @@ aside {
   p {
     max-width: $content-width;
     margin: 0 auto;
+    font-size: 16px;
   }
-}
 
-@media (min-width: $mobile-breakpoint) {
-  .presentation {
+  @media (min-width: $mobile-breakpoint) {
     padding-top: 3rem;
   }
 }
