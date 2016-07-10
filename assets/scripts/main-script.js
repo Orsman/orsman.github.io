@@ -6,7 +6,15 @@
     var sidebar = document.querySelector('#sidebar');
     var checkbox = document.querySelector('#sidebar_chkbox');
 
+    if ('addEventListener' in document) {
+        document.addEventListener('DOMContentLoaded', function() {
+            FastClick.attach(document.body);
+        }, false);
+    }
+
     document.addEventListener('click', function(e) {
+        if (!checkbox) return;
+
         var target = e.target;
 
         if(!checkbox.checked ||

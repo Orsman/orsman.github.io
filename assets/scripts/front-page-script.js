@@ -3,6 +3,7 @@ if (document.addEventListener) {
 }
 
 function excuteDomReadyCallBacks() {
+    FastClick.attach(document.body);
 
     setTimeout(function() {
         document.body.classList.add('dom_ready');
