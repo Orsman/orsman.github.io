@@ -1,51 +1,49 @@
 
 .wrapper {
-  position: relative;
-  min-height: 100%;
-  -webkit-perspective: 1500px;
-  perspective: 1500px;
+    position: relative;
+    min-height: 100%;
+    -webkit-perspective: 1500px;
+    perspective: 1500px;
 }
 
 .grid-wrap {
-  margin: 0 auto;
-  width: 100%;
-  max-width: $max-width;
-  position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: $max-width;
+    position: relative;
 }
 
 .box,
 .box_x2 {
-  height: 10rem;
-  padding: .5rem 1rem;
-  background-color: transparent;
-  opacity: .9;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: -webkit-transform .3s ease-out, opacity .3s ease;
-  transition: transform .3s ease-out, opacity .3s ease;
-  -webkit-transform: translateY(30px);
-  transform: translateY(30px);
-  opacity: 0;
+    height: 10rem;
+    padding: .5rem 1rem;
+    background-color: transparent;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    transition: transform .3s ease-out, opacity .3s ease;
+    transform: translateY(30px);
+    opacity: 0;
+
+    @media (min-width: $mobile-breakpoint) {
+        height: 10rem;
+        padding: .25rem;
+    }
 }
 
 @media (min-width: $mobile-breakpoint) {
-  .box,
-  .box_x2 {
-    height: 10rem;
-    padding: .25rem;
-  }
-
-  .box_x2 {
-    height: 20rem;
-  }
+    .box_x2 {
+        height: 20rem;
+    }
 }
 
 .dom_ready .box,
 .dom_ready .box_x2 {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
 }
 
 .delay-10 { transition-delay: .05s; }
@@ -56,130 +54,129 @@
 
 .box_content,
 .front {
-  position: relative;
-  width: 100%;
-  height: 100%;
+    position: relative;
+    width: 100%;
+    height: 100%;
 
-  overflow: hidden;
+    overflow: hidden;
 
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 
-  span {
-    color: #fff;
-    text-transform: capitalize;
-    font-family: 'Source Sans Pro';
-    font-size: 1.5rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
-  }
+    span {
+        color: #fff;
+        text-transform: capitalize;
+        font-family: 'Source Sans Pro';
+        font-size: 1.5rem;
+        font-weight: 900;
+        letter-spacing: 1px;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+    }
 
-  &:hover {
-    text-decoration: none;
-  }
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .box_content img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .box_content {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .box_content.fade_out {
-  opacity: 0;
+    opacity: 0;
 }
 
 .box_content:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0);
-  cursor: pointer;
-  z-index: 1;
-  -webkit-transition: background-color .3s ease;
-  transition: background-color .3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color .3s ease;
 }
 
 .box_content:hover:after {
-  background-color: rgba(255, 255, 255, .17);
+    background-color: rgba(255, 255, 255, .17);
 }
 
 .placeholder {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-
-  > div {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
+    top: 0;
+    left: 0;
+    z-index: 9999;
 
-  .front {
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 
-  .back {
-    background-color: #f1f4f9;
-  }
+    > div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .front {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .back {
+        background-color: #f1f4f9;
+    }
 }
 
 .active_transition .placeholder {
-  -webkit-transform: rotateX(-179.9deg);
-  transform: rotateX(-179.9deg);
+    -webkit-transform: rotateX(-179.9deg);
+    transform: rotateX(-179.9deg);
 
-  -webkit-transition: all .5s cubic-bezier(0,0,0.25,1);
-  transition: all .5s cubic-bezier(0,0,0.25,1);
+    -webkit-transition: all .5s cubic-bezier(0,0,0.25,1);
+    transition: all .5s cubic-bezier(0,0,0.25,1);
 
-  // Using a small transition her with delay because the back needs a color in the
-  // beginning to make the picture flip more distinct.
-  .back {
-    -webkit-transition: background-color 0.15s ease .3s;
-    transition: background-color 0.15s ease .3s;
-    background-color: #fff;
-    -webkit-transform: rotateX(180deg);
-    transform: rotateX(180deg);
-  }
+    // Using a small transition her with delay because the back needs a color in the
+    // beginning to make the picture flip more distinct.
+    .back {
+        -webkit-transition: background-color 0.15s ease .3s;
+        transition: background-color 0.15s ease .3s;
+        background-color: #fff;
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+    }
 }
 
 // Settings/transitions for returning to start page from sub page
 .returning_transition .placeholder {
-  -webkit-transform: rotateX(179.9deg);
-  transform: rotateX(179.9deg);
+    -webkit-transform: rotateX(179.9deg);
+    transform: rotateX(179.9deg);
 
-  -webkit-transition: all .5s cubic-bezier(0,0,0.25,1);
-  transition: all .5s cubic-bezier(0,0,0.25,1);
+    -webkit-transition: all .5s cubic-bezier(0,0,0.25,1);
+    transition: all .5s cubic-bezier(0,0,0.25,1);
 
-  .front {
-    -webkit-transform: rotateX(180deg);
-    transform: rotateX(180deg);
-  }
+    .front {
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+    }
 }
 
 #tdbid,
@@ -187,58 +184,59 @@
 #bookshelf,
 #about-me,
 #blog {
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-  &.not-visible {
-    visibility: hidden;
-  }
+    &.not-visible {
+        opacity: 0;
+        position: none;
+    }
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: #252b33;
-    opacity: 0;
-  }
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #252b33;
+        opacity: 0;
+    }
 
-  span {
-    position: relative;
-  }
+    span {
+        position: relative;
+    }
 }
 
 #blog:before,
 #about-me:before {
-  opacity: .1;
+    opacity: .1;
 }
 
 #tdbid:before {
-  opacity: .2;
+    opacity: .2;
 }
 
 #bookshelf:before {
-  opacity: .3;
+    opacity: .3;
 }
 
 #bookshelf {
-  background-image: url(../assets/bookshelf.jpg);
+    background-image: url(../assets/bookshelf.jpg);
 }
 
 #tdbid {
-  background-image: url(../assets/road-trip.png);
+    background-image: url(../assets/road-trip.png);
 }
 
 #about-me {
-  background-image: url(../assets/banner_norge.png);
+    background-image: url(../assets/banner_norge.png);
 }
 
 #work {
-  background-image: url(../assets/hacker.jpg);
+    background-image: url(../assets/hacker.jpg);
 }
 
 #blog {
-  background-image: url(../assets/flight.jpg);
+    background-image: url(../assets/flight.jpg);
 }

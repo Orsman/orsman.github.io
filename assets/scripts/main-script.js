@@ -1,10 +1,11 @@
 (function() {
+
     if (window.innerWidth < 800) return;
 
     var links = document.querySelectorAll('a');
     var toggle = document.querySelector('#menu_link');
-    var sidebar = document.querySelector('#sidebar');
-    var checkbox = document.querySelector('#sidebar_chkbox');
+    var rightMenu = document.querySelector('.right-menu');
+    var checkbox = document.querySelector('#right-menu__chkbox');
 
     if ('addEventListener' in document) {
         document.addEventListener('DOMContentLoaded', function() {
@@ -18,7 +19,7 @@
         var target = e.target;
 
         if(!checkbox.checked ||
-            sidebar.contains(target) ||
+            rightMenu.contains(target) ||
             (target === checkbox || target === toggle)) return;
 
         checkbox.checked = false;

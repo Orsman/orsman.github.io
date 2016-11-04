@@ -1,46 +1,38 @@
 
 nav.top {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  margin: 0 auto;
-  height: 48px;
-  z-index: 1;
-
-  h3 {
-    display: inline-block;
-    text-transform: none;
-    font-size: 16px;
-    margin-top: 0;
-  }
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 48px;
+    z-index: 1;
 }
 
 #menu_link {
-  position: relative;
-  float: right;
-  cursor: pointer;
-  display: inline-block;
-  padding: 0 1rem;
-  line-height: 46px;
-  padding-left: $spacing-unit * 2;
-  padding-right: $spacing-unit;
-  background-color: #fff;
-  transition: background-color 250ms ease 250ms;
+    position: relative;
+    float: right;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 1rem;
+    line-height: 46px;
+    padding-left: $spacing-unit * 2;
+    padding-right: $spacing-unit;
+    background-color: #fff;
+    transition: background-color 250ms ease 250ms;
 
-  .open-text,
-  .close-text {
-    position: absolute;
-    left: 15px;
-    transition: opacity 300ms ease;
-    pointer-events: none;
-    margin-bottom: 0;
-  }
+    &:hover {
+        color: $brand-color;
 
-  .open-text { opacity: 1; }
-  .close-text { opacity: 0; }
+        #hamburger,
+        #hamburger:before,
+        #hamburger:after {
+            background-color: $brand-color;
+        }
+    }
+}
 
-  #hamburger {
+#hamburger {
     display: inline-block;
     margin-left: 1rem;
     height: 3px;
@@ -50,42 +42,31 @@ nav.top {
 
     &:before,
     &:after {
-      content: '';
-      display: block;
-      height: 3px;
-      width: 20px;
-      background-color: $text-color;
+        content: '';
+        display: block;
+        height: 3px;
+        width: 20px;
+        background-color: $text-color;
     }
 
     &:before {
-      transform: translate(0, -6px);
+        transform: translate(0, -6px);
     }
 
     &:after {
-      transform: translate(0, 3px);
+        transform: translate(0, 3px);
     }
-  }
-
-  &:hover {
-    color: $brand-color;
-
-    #hamburger,
-    #hamburger:before,
-    #hamburger:after {
-      background-color: $brand-color;
-    }
-  }
 }
 
-#sidebar_chkbox:checked ~ nav #menu_link {
-  background-color: transparent;
-  transition-delay: 0s;
+#right-menu__chkbox:checked ~ nav #menu_link {
+    background-color: transparent;
+    transition-delay: 0s;
 }
 
-#sidebar_chkbox:checked ~ nav .open-text {
-  opacity: 0;
+#right-menu__chkbox:checked ~ nav .right-menu__open-text {
+    opacity: 0;
 }
 
-#sidebar_chkbox:checked ~ nav .close-text {
-  opacity: 1;
+#right-menu__chkbox:checked ~ nav .right-menu__close-text {
+    opacity: 1;
 }

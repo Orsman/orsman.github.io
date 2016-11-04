@@ -1,0 +1,109 @@
+.right-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: 280px;
+    transition: transform 300ms ease;
+    background-color: #f1f2f1;
+    padding-top: $spacing-unit * 2;
+    overflow-y: scroll;
+}
+
+.right-menu__open-text,
+.right-menu__close-text {
+    @extend h3;
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    text-transform: none;
+    font-size: 16px;
+    line-height: 46px;
+
+    transition: opacity 300ms ease;
+    pointer-events: none;
+}
+
+.right-menu__open-text { opacity: 1; }
+.right-menu__close-text { opacity: 0; }
+
+.right-menu__avatar {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px auto;
+    max-width: 150px;
+}
+
+.right-menu__text {
+    padding: 0 30px;
+    line-height: 1.5em;
+    font-size: .9rem;
+}
+
+.right-menu__list {
+    margin-left: 0;
+    list-style-type: none;
+}
+
+.right-menu__list-item {
+    transform: translateX(150px);
+    opacity: 0;
+
+    transition: transform 450ms ease 100ms, opacity 250ms ease;
+}
+
+.right-menu__list-item a {
+    display: block;
+    padding: 15px 30px;
+    font-family: 'Source Sans Pro';
+    font-weight: 900;
+    line-height: 1em;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+    letter-spacing: 1px;
+    transition: background-color 250ms ease;
+
+    &:hover {
+        background-color: rgba(0,0,0,.05);
+        border-color: transparent;
+    }
+}
+
+/* Transition settings
+====================================================*/
+
+#right-menu__chkbox {
+    display: none;
+}
+
+#right-menu__chkbox:checked ~ nav #menu_link {
+    background-color: transparent;
+    transition-delay: 0s;
+}
+
+#right-menu__chkbox:checked ~ nav .right-menu__open-text {
+    opacity: 0;
+}
+
+#right-menu__chkbox:checked ~ nav .right-menu__close-text {
+    opacity: 1;
+}
+
+#right-menu__chkbox:checked ~ .right-menu,
+#right-menu__chkbox:checked ~ article,
+#right-menu__chkbox:checked ~ footer {
+  transform: translateX(-280px);
+}
+
+#right-menu__chkbox:checked ~ .right-menu .right-menu__list-item {
+    transform: translateX(0);
+    opacity: 1;
+
+    &:nth-child(1) { transition-delay: 200ms; }
+    &:nth-child(2) { transition-delay: 250ms; }
+    &:nth-child(3) { transition-delay: 300ms; }
+    &:nth-child(4) { transition-delay: 350ms; }
+    &:nth-child(5) { transition-delay: 400ms; }
+}

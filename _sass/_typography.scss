@@ -1,73 +1,72 @@
 
 p {
-  line-height: 1.75em;
-  letter-spacing: 0.01rem;
+    line-height: 1.75em;
+    letter-spacing: 0.01rem;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Source Sans Pro';
-  font-weight: 900;
+    font-family: 'Source Sans Pro';
+    font-weight: 900;
 }
 
 h1 {
-  position: relative;
-  font-size: 2rem;
-  line-height: 1.25em;
-  margin-top: 0;
-  margin-bottom: 0;
+    position: relative;
+    font-size: 2rem;
+    line-height: 1.25em;
+    margin-top: 0;
+    margin-bottom: 0;
 
-  @media (min-width: $mobile-breakpoint) {
-    font-size: 2.5rem;
-  }
+    @media (min-width: $mobile-breakpoint) {
+        font-size: 2.5rem;
+    }
 }
 
 h2 {
-  font-size: 1.75rem;
-  margin-top: 0;
-  margin-bottom: .25em;
+    font-size: 1.75rem;
+    margin-top: 0;
+    margin-bottom: .25em;
 }
 
 h3 {
-  font-size: 1.5rem;
-  margin-top: $spacing-unit * 2;
-  margin-bottom: $spacing-unit / 2;
+    font-size: 1.5rem;
+    margin-top: $spacing-unit * 2;
+    margin-bottom: $spacing-unit / 2;
 }
 
 h4 {
-  text-transform: uppercase;
-  font-size: .8em;
+    text-transform: uppercase;
+    font-size: .8em;
 }
 
 h5 {
-  font-size: 1em;
-  line-height: 1.25em;
+    font-size: 1em;
+    line-height: 1.25em;
 }
 
-
 a {
-  color: $text-color;
-  text-decoration: none;
-  -webkit-transition: opacity .25s ease;
-  transition: opacity .25s ease;
-  outline: none;
-
-  &:hover {
+    color: $text-color;
     text-decoration: none;
-  }
+    -webkit-transition: opacity .25s ease;
+    transition: opacity .25s ease;
+    outline: none;
 
-  * {
-    pointer-events: none;
-  }
+    &:hover {
+        text-decoration: none;
+    }
+
+    * {
+        pointer-events: none;
+    }
 }
 
 ::-webkit-selection {
-  background-color: #333;
-  text-shadow: none;
-  color: #fff;
+    background-color: #333;
+    text-shadow: none;
+    color: #fff;
 }
 
 ::selection {
-  background-color: #333;
-  text-shadow: none;
-  color: #fff;
+    background-color: #333;
+    text-shadow: none;
+    color: #fff;
 }

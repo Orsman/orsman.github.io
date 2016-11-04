@@ -4,26 +4,30 @@
   {% include head.html %}
 
   <body>
-    <div class="main_wrapper">
-        <input id="sidebar_chkbox" type="checkbox">
+    <main class="main-wrapper">
+        <input id="right-menu__chkbox" type="checkbox">
         {% include header.html %}
 
-        <aside id="sidebar">
-            <a href="/"><img class="avatar" src="../assets/face.jpg" alt="Me"></a>
-            <p>Hello, I'm Johan Forsman.</br>31 year old swedish web developer, based in Stockholm.</p>
-            <ul>
-                <li><a href="/about">About me</a></li>
-                <li><a href="/books">Bookshelf</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/tdbid">TDBID</a></li>
-                <li><a href="/work">Work</a></li>
+        <aside class="right-menu">
+            <a href="/">
+                <img class="right-menu__avatar" src="../assets/face.jpg" alt="Me">
+            </a>
+            <p class="right-menu__text">
+                Hi, I'm Johan Forsman.</br>32 year old swedish web developer, based in Stockholm.
+            </p>
+            <ul class="right-menu__list">
+                <li class="right-menu__list-item"><a href="/about">About me</a></li>
+                <li class="right-menu__list-item"><a href="/books">Bookshelf</a></li>
+                <li class="right-menu__list-item"><a href="/blog">Blog</a></li>
+                <li class="right-menu__list-item"><a href="/tdbid">TDBID</a></li>
+                <li class="right-menu__list-item"><a href="/work">Work</a></li>
             </ul>
         </aside>
 
         {{ content }}
 
         {% include footer.html %}
-    </div>
+    </main>
 
   </body>
 

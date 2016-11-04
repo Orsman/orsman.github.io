@@ -1,118 +1,56 @@
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
-
 html {
-  height: 100%;
-  font-family: $base-font-family;
-  font-size: 15px;
-  line-height: $base-line-height;
-  color: $text-color;
+    height: 100%;
+    font-family: $base-font-family;
+    font-size: 15px;
+    line-height: $base-line-height;
+    color: $text-color;
 
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-feature-settings: "kern" 1;
-  -moz-font-feature-settings: "kern" 1;
-  -o-font-feature-settings: "kern" 1;
-  font-feature-settings: "kern" 1;
-  font-kerning: normal;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
 }
 
 body {
-  margin: 0;
-  position: relative;
-  height: 100%;
-  transition: opacity 400ms ease;
-  overflow-x: hidden;
+    margin: 0;
+    position: relative;
+    height: 100%;
+    transition: opacity 400ms ease;
+    overflow-x: hidden;
 
-  @media (min-width: 800px) {
-    opacity: 0;
+    @media (min-width: 800px) {
+        opacity: 0;
 
-    &.fade-in {
-      opacity: 1;
+        &.fade-in {
+            opacity: 1;
+        }
+
+        &.fade-out {
+            opacity: 0;
+        }
     }
+}
 
-    &.fade-out {
-      opacity: 0;
+.main-wrapper {
+    position: relative;
+    min-height: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    overflow: auto;
+
+    @media (min-width: $mobile-breakpoint) {
+        padding-bottom: 8rem;
     }
-  }
-}
-
-.main_wrapper {
-  position: relative;
-  min-height: 100%;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-
-  overflow: auto;
-}
-
-aside {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 100%;
-  width: 280px;
-  transition: transform 300ms ease;
-  background-color: #f1f2f1;
-  padding-top: $spacing-unit * 2;
-  overflow-y: scroll;
-
-  .avatar {
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 15px auto;
-    max-width: 150px;
-  }
-
-  p {
-    padding: 0 30px;
-    line-height: 1.5em;
-    font-size: .9rem;
-  }
-
-  ul {
-    margin-left: 0;
-  }
-
-  li {
-    list-style-type: none;
-  }
-
-  li a {
-    display: block;
-    padding: 15px 30px;
-    font-family: 'Source Sans Pro';
-    font-weight: 900;
-    line-height: 1em;
-    border-bottom: 1px solid rgba(0,0,0,.05);
-    letter-spacing: 1px;
-
-    &:hover {
-      background-color: rgba(0,0,0,.05);
-      border-color: transparent;
-    }
-  }
-}
-
-#sidebar_chkbox {
-  display: none;
-}
-
-#sidebar_chkbox:checked ~ #sidebar,
-#sidebar_chkbox:checked ~ article,
-#sidebar_chkbox:checked ~ footer {
-  transform: translateX(-280px);
-}
-
-
-@media (min-width: $mobile-breakpoint) {
-  .main_wrapper {
-    padding-bottom: 8rem;
-  }
 }
 
 @media (min-width: 500px) {
@@ -134,7 +72,6 @@ aside {
 @media (min-width: 900px) {
   html { font-size: 20px; }
 }
-
 
 /**
  * Wrapper
@@ -158,36 +95,37 @@ aside {
 
 .icon {
 
-  > svg {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
+    > svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
 
-    path {
-        fill: #D3D3D3;
+        path {
+            fill: #D3D3D3;
+        }
     }
-  }
 }
 
-// Mobile presentation
-// ==============================
+/* Mobile presentation
+======================================================== */
+
 .presentation {
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  max-width: $content-width + 100px;
-  text-align: center;
-
-  h1 {
-    margin-bottom: .5em;
-  }
-
-  p {
-    max-width: $content-width;
     margin: 0 auto;
-  }
+    padding: 2rem 1rem;
+    max-width: $content-width + 100px;
+    text-align: center;
 
-  @media (min-width: $mobile-breakpoint) {
-    padding-top: 3rem;
-  }
+    h1 {
+        margin-bottom: .5em;
+    }
+
+    p {
+        max-width: $content-width;
+        margin: 0 auto;
+    }
+
+    @media (min-width: $mobile-breakpoint) {
+        padding-top: 3rem;
+    }
 }

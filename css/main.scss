@@ -41,14 +41,15 @@ $mobile-breakpoint:     600px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
     "base",
+    "typography",
     "grid",
+    "syntax-highlighting",
     "404",
+    "post",
     "books",
     "footer",
     "nav",
-    "post",
     "start",
     "work",
-    "typography",
-    "syntax-highlighting"
+    "right-menu"
 ;

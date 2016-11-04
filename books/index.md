@@ -5,15 +5,15 @@ title:  "My bookshelf"
 
 <article class="full-width">
   <h1>My bookshelf</h1>
-  <ul class="list-of-books">
+  <ul class="book-list">
     {% for book in site.books %}
-    <li>
-      <figure>
+    <li class="book-list__item">
+      <figure class="book-list__item-figure">
         <img src="../assets/books/{{ book.img }}" alt="{{ book.title }} - {{ book.author }}">
       </figure>
-      <h3>{{ book.title }}</h3>
-      <h4>{{ book.author }}</h4>
-      <p>{{ book.review }}</p>
+      <p class="book-list__item-title">{{ book.title }}</p>
+      <p class="book-list__item-author">{{ book.author }}</p>
+      <p class="book-list__item-summary">{{ book.review }}</p>
     </li>
     {% endfor %}
   </ul>
