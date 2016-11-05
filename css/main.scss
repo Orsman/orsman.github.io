@@ -14,7 +14,7 @@ $spacing-unit:          30px;
 
 $text-color:            #44484a;
 $brand-color:           #3F51B5;
-$code-background:       #F3F3F9;
+$code-background:       #f0f0f5;
 
 $grey-color:            #d2d2d2;
 $grey-color-light:      lighten($grey-color, 10%);
@@ -46,6 +46,7 @@ $mobile-breakpoint:     600px;
     "syntax-highlighting",
     "404",
     "post",
+    "post-list",
     "books",
     "footer",
     "nav",

@@ -73,6 +73,21 @@ body {
   html { font-size: 20px; }
 }
 
+/* Lists
+======================================================== */
+
+ul, ol {
+    margin-left: $spacing-unit / 2;
+}
+
+li {
+    > ul,
+    > ol {
+        margin-bottom: 0;
+    }
+}
+
+
 /**
  * Wrapper
  */

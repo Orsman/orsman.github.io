@@ -1,16 +1,10 @@
 
-.wrapper {
-    position: relative;
-    min-height: 100%;
-    -webkit-perspective: 1500px;
-    perspective: 1500px;
-}
 
 .grid-wrap {
+    position: relative;
     margin: 0 auto;
     width: 100%;
     max-width: $max-width;
-    position: relative;
 }
 
 .box,
@@ -23,8 +17,8 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 
-    transition: transform .3s ease-out, opacity .3s ease;
-    transform: translateY(30px);
+    transition: transform 500ms cubic-bezier(0,0,0.25,1), opacity 500ms cubic-bezier(0,0,0.25,1);
+    transform: translateY(50px);
     opacity: 0;
 
     @media (min-width: $mobile-breakpoint) {
@@ -46,14 +40,13 @@
     transform: translateY(0);
 }
 
-.delay-10 { transition-delay: .05s; }
-.delay-20 { transition-delay: .1s; }
-.delay-30 { transition-delay: .15s; }
-.delay-40 { transition-delay: .2s; }
-.delay-50 { transition-delay: .25s; }
+.delay-10 { transition-delay: 100ms; }
+.delay-20 { transition-delay: 200ms; }
+.delay-30 { transition-delay: 300ms; }
+.delay-40 { transition-delay: 400ms; }
+.delay-50 { transition-delay: 500ms; }
 
-.box_content,
-.front {
+.box_content {
     position: relative;
     width: 100%;
     height: 100%;
@@ -87,27 +80,12 @@
     }
 }
 
-.box_content img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
-.box_content {
-    cursor: pointer;
-}
-
-.box_content.fade_out {
-    opacity: 0;
-}
-
 .box_content:after {
+    display: block;
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
-    content: '';
-    display: block;
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0);
@@ -120,65 +98,6 @@
     background-color: rgba(255, 255, 255, .17);
 }
 
-.placeholder {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-
-    > div {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-    }
-
-    .front {
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    .back {
-        background-color: #f1f4f9;
-    }
-}
-
-.active_transition .placeholder {
-    -webkit-transform: rotateX(-179.9deg);
-    transform: rotateX(-179.9deg);
-
-    -webkit-transition: all .5s cubic-bezier(0,0,0.25,1);
-    transition: all .5s cubic-bezier(0,0,0.25,1);
-
-    // Using a small transition her with delay because the back needs a color in the
-    // beginning to make the picture flip more distinct.
-    .back {
-        -webkit-transition: background-color 0.15s ease .3s;
-        transition: background-color 0.15s ease .3s;
-        background-color: #fff;
-        -webkit-transform: rotateX(180deg);
-        transform: rotateX(180deg);
-    }
-}
-
-// Settings/transitions for returning to start page from sub page
-.returning_transition .placeholder {
-    -webkit-transform: rotateX(179.9deg);
-    transform: rotateX(179.9deg);
-
-    -webkit-transition: all .5s cubic-bezier(0,0,0.25,1);
-    transition: all .5s cubic-bezier(0,0,0.25,1);
-
-    .front {
-        -webkit-transform: rotateX(180deg);
-        transform: rotateX(180deg);
-    }
-}
-
 #tdbid,
 #work,
 #bookshelf,
@@ -186,22 +105,6 @@
 #blog {
     background-repeat: no-repeat;
     background-size: cover;
-
-    &.not-visible {
-        opacity: 0;
-        position: none;
-    }
-
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        background-color: #252b33;
-        opacity: 0;
-    }
 
     span {
         position: relative;

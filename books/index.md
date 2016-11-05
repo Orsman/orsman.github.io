@@ -3,7 +3,7 @@ layout: default
 title:  "My bookshelf"
 ---
 
-<article class="full-width">
+<article class="post post--full-width">
   <h1>My bookshelf</h1>
   <ul class="book-list">
     {% for book in site.books %}
