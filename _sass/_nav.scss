@@ -18,7 +18,7 @@ nav.top {
     padding-left: $spacing-unit * 2;
     padding-right: $spacing-unit;
     background-color: white;
-    transition: background-color 250ms ease 250ms;
+    transition: background-color 250ms ease 250ms, color 250ms ease;
 
     &:hover {
         color: $brand-color;

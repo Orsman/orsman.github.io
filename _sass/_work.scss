@@ -1,154 +1,152 @@
 
 .work-experience,
 .work-experience * {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .work-experience {
-  padding-top: 2rem;
-  padding-left: 1rem;
+    padding-top: 2rem;
+    padding-left: 1rem;
 }
 
 .work-experience li {
-  list-style-type: none;
-  position: relative;
-  padding-left: 3rem;
-  padding-bottom: 3rem;
+    list-style-type: none;
+    position: relative;
+    padding-left: 3rem;
+    padding-bottom: 3rem;
 
-  &:before { display: none; }
+    &:before { display: none; }
 
-  time {
-    font-size: 12px;
-    line-height: 30px;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
-  }
+    time {
+        font-size: 12px;
+        line-height: 30px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
 
-  h5 {
-    margin-bottom: 15px;
-  }
+    h5 {
+        margin-bottom: 15px;
+    }
 
-  a {
-    font-size: .9rem;
-    font-weight: 600;
-  }
+    a {
+        font-size: .9rem;
+        font-weight: 600;
+    }
 }
 
 .work-experience li .bullet {
-  position: absolute;
-  top: 10px;
-  bottom: 0;
-  left: 0;
-  width: 1px;
-  height: 100%;
-  background: #d1d1d1;
-
-  &:before {
-    content: '';
     position: absolute;
-    top: 0;
-    left: -5px;
-    width: 11px;
-    height: 11px;
-    background: #ddd;
-    border-radius: 50%;
-  }
+    top: 10px;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: #d1d1d1;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -5px;
+        width: 11px;
+        height: 11px;
+        background: #ddd;
+        border-radius: 50%;
+    }
 }
 
-.work-experience li.current .bullet:before { background: $brand-color; }
+.work-experience li.current .bullet:before {
+    background: $brand-color;
+}
 
 .work-experience li:last-child .bullet {
-  background: -webkit-linear-gradient(#d1d1d1, #fff); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#d1d1d1, #fff); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#d1d1d1, #fff); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#d1d1d1, #fff); /* Standard syntax */
+    background: -webkit-linear-gradient(#d1d1d1, #fff); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#d1d1d1, #fff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#d1d1d1, #fff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#d1d1d1, #fff); /* Standard syntax */
 }
 
 .frameworks-used,
 .companies-worked-with {
-  text-align: justify;
-  font-size: 0.1px;
-  padding-left: 0;
-  margin: 0 auto;
-  max-width: 900px;
-
-  li {
-    display: inline-block;
-    width: 100%;
-    height: 100px;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  &:after {
-    display: inline-block;
-    content: '';
-    width: 100%;
-  }
-
-  a,
-  a:hover {
-    display: block;
-    width: 100%;
-    height: 100%;
+    text-align: justify;
+    font-size: 0.1px;
+    padding-left: 0;
     margin: 0 auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    background-image: inherit;
+    max-width: 900px;
 
-    &:before { display: none; }
+    li {
+        display: inline-block;
+        width: 50%;
+        height: 75px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
 
-    &.angular {
-      background-image: url(../assets/angular.png);
+    &:after {
+        display: inline-block;
+        content: '';
+        width: 100%;
     }
-    &.gulp {
-      background-image: url(../assets/gulp.png);
+
+    a,
+    a:hover {
+        display: block;
+        width: 75%;
+        height: 100%;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: inherit;
+
+        &:before { display: none; }
+
+        &.angular {
+            background-image: url(../assets/angular_grey.png);
+        }
+        &.gulp {
+            background-image: url(../assets/gulp_grey.png);
+        }
+        &.sass {
+            background-image: url(../assets/sass_grey.svg);
+        }
+        &.magic {
+            background-image: url(../assets/companies/magic_grey.png);
+        }
+        &.istone {
+            background-image: url(../assets/companies/istone.svg);
+        }
+        &.stormfors {
+            background-image: url(../assets/companies/stormfors_grey.svg);
+        }
+        &.instabridge {
+            background-image: url(../assets/companies/instabridge_grey.png);
+        }
+        &.mediaplanet {
+            background-image: url(../assets/companies/mediaplanet_grey.png);
+        }
+        &.bitrefill {
+            background-image: url(../assets/companies/bitrefill_grey.png);
+        }
     }
-    &.sass {
-      background-image: url(../assets/sass.svg);
-    }
-    &.magic {
-      background-image: url(../assets/magic.png);
-    }
-    &.stormfors {
-      background-image: url(../assets/stormfors.svg);
-    }
-    &.instabridge {
-      background-image: url(../assets/instabridge.png);
-    }
-    &.mediaplanet {
-      background-image: url(../assets/mediaplanet.png);
-    }
-    &.bitrefill {
-      background-image: url(../assets/bitrefill.png);
-    }
-  }
 }
 
-
 @media (min-width: $mobile-breakpoint) {
-
-  .frameworks-used li,
-  .companies-worked-with li {
-    width: 33%;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-
-    a {
-      max-width: 150px;
-      width: 100%;
+    .frameworks-used {
+        padding-top: 1rem;
+        padding-bottom: 4rem;
     }
-  }
 
-  .frameworks-used {
-    padding-top: 1rem;
-    padding-bottom: 4rem;
-  }
+    .frameworks-used li,
+    .companies-worked-with li {
+        width: 33%;
+        height: 100px;
 
-  .companies-worked-with {
-
-  }
+        a {
+            max-width: 150px;
+            width: 100%;
+        }
+    }
 }

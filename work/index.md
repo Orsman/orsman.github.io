@@ -48,6 +48,7 @@ title:  "My experience"
 <h3 style="text-align:center;margin-top:60px;">Companies I've worked with:</h3>
 <ul class="companies-worked-with">
   <li><a class="magic" href="http://www.magicbyistone.se" target="_blank"></a></li>
+  <li><a class="istone" href="http://www.istone.se" target="_blank"></a></li>
   <li><a class="stormfors" href="http://www.stormfors.com" target="_blank"></a></li>
   <li><a class="instabridge" href="http://www.instabridge.com" target="_blank"></a></li>
   <li><a class="mediaplanet" href="http://www.mediaplanet.com" target="_blank"></a></li>
