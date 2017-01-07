@@ -4,10 +4,10 @@
     bottom: 0;
     left: 100%;
     width: 280px;
-    transition: transform 300ms ease;
     background-color: #f3f4f5;
     padding-top: $spacing-unit * 2;
     overflow-y: scroll;
+    transition: $menu-transition;
 }
 
 .right-menu__open-text,
@@ -100,7 +100,8 @@
     transform: translateX(-280px);
 }
 
-#right-menu__chkbox:checked ~ nav #menu_link {
+#right-menu__chkbox:checked ~ nav #menu_link,
+#right-menu__chkbox:checked ~ nav .nav-top__menu-link {
     transform: translateX(280px);
 }
 

@@ -11,7 +11,7 @@
     margin: 0 auto;
     padding: 60px 1.5rem;
     max-width: $content-width;
-    transition: transform 300ms ease;
+    transition: $menu-transition;
 
     &--full-width {
       max-width: 1080px;
