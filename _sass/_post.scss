@@ -9,12 +9,17 @@
 
 .post {
     margin: 0 auto;
-    padding: 2rem 1.5rem;
+    padding: 60px 1.5rem;
     max-width: $content-width;
     transition: transform 300ms ease;
 
     &--full-width {
       max-width: 1080px;
+    }
+
+    @media (min-width: $on-desktop) {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 }
 

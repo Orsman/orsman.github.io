@@ -1,49 +1,57 @@
+
 /* Teh Grid
 ==================================== */
 
-.row {
-  position: relative;
+.grid {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: $max-width;
 }
 
-.row:before,
-.row:after {
-  content: '';
-  display: table;
+.grid__row {
+    position: relative;
 }
 
-.row:after {
-  clear: both;
+.grid__row:before,
+.grid__row:after {
+    content: '';
+    display: table;
 }
 
-.row > * {
-  margin: 0;
-  float: left;
+.grid__row:after {
+    clear: both;
 }
 
-[class*="column-"] {
-  position: relative;
-  min-height: 1px;
-  width: 100%;
+.grid__row > * {
+    margin: 0;
+    float: left;
 }
 
-.column-1-1 {
-  width: 100%;
+[class*="grid__column-"] {
+    position: relative;
+    min-height: 1px;
+    width: 100%;
+}
+
+.grid__column-1-1 {
+    width: 100%;
 }
 
 /* Responsiveness
 ========================================== */
 
 @media (min-width: 600px) {
-  .column-1-2,
-  .column-2-4, {
-    width: 50%;
-  }
+    .grid__column-1-2,
+    .grid__column-2-4, {
+        width: 50%;
+    }
 
-  .column-1-3 {
-    width: 33.33%;
-  }
+    .grid__column-1-3 {
+        width: 33.33%;
+    }
 
-  .column-2-3 {
-    width: 66.66%;
-  }
+    .grid__column-2-3 {
+        width: 66.66%;
+    }
 }

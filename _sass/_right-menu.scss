@@ -33,7 +33,7 @@
 .right-menu__avatar {
     border-radius: 50%;
     display: block;
-    margin: 0 auto 15px auto;
+    margin: 0 auto 30px auto;
     max-width: 150px;
 }
 
@@ -41,6 +41,7 @@
     padding: 0 30px;
     line-height: 1.5em;
     font-size: 16px;
+    margin-bottom: 15px;
 }
 
 .right-menu__list {
@@ -94,8 +95,13 @@
 
 #right-menu__chkbox:checked ~ .right-menu,
 #right-menu__chkbox:checked ~ article,
-#right-menu__chkbox:checked ~ footer {
-  transform: translateX(-280px);
+#right-menu__chkbox:checked ~ footer,
+#right-menu__chkbox:checked ~ nav {
+    transform: translateX(-280px);
+}
+
+#right-menu__chkbox:checked ~ nav #menu_link {
+    transform: translateX(280px);
 }
 
 #right-menu__chkbox:checked ~ .right-menu .right-menu__list-item {

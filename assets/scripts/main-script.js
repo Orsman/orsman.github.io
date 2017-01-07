@@ -1,29 +1,29 @@
-(function() {
+;(function(window, document) {
 
     if (window.innerWidth < 800) return;
 
     var links = document.querySelectorAll('a');
-    var toggle = document.querySelector('#menu_link');
+    var toggle = document.querySelector('.nav-top__menu-link');
     var rightMenu = document.querySelector('.right-menu');
     var checkbox = document.querySelector('#right-menu__chkbox');
+
+    if (toggle) {
+        toggle.addEventListener('mouseenter', function() {
+            checkbox.checked = true;
+        });        
+    }
+
+    if (rightMenu) {
+        rightMenu.addEventListener('mouseleave', function() {
+            checkbox.checked = false;
+        });
+    }
 
     if ('addEventListener' in document) {
         document.addEventListener('DOMContentLoaded', function() {
             FastClick.attach(document.body);
         }, false);
     }
-
-    document.addEventListener('click', function(e) {
-        if (!checkbox) return;
-
-        var target = e.target;
-
-        if(!checkbox.checked ||
-            rightMenu.contains(target) ||
-            (target === checkbox || target === toggle)) return;
-
-        checkbox.checked = false;
-    }, false);
 
     setTimeout(function() {
         document.body.classList.add('fade-in');
@@ -49,4 +49,4 @@
         }, 400);
     }
 
-})();
+})(window, document);

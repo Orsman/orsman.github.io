@@ -37,22 +37,6 @@ for(var i = 0; i < itemsArray.length; i++) {
 }
 {% endhighlight %}
 
-{% highlight javascript %}
-const stripe = require('stripe')('sk_test_BQokikJOvBiI2HlWgH4olfQ2');
-
-// Create your first payment from a test card.
-const charge = await stripe.charges.create({
-  amount: 2000,
-  currency: 'usd',
-  source: {
-    number: '4242424242424242',
-    cvc: '123',
-    exp_month: 12,
-    exp_year: 2018
-  }
-});
-{% endhighlight %}
-
 What main functionality of JSCS is that it creates spacing at the right places. More breathing room in the code, and the readability will be enhanced.
 
 ### Get it on your machine
