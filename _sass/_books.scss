@@ -17,18 +17,19 @@
 }
 
 .book-list__item {
-    width: 30%;
+    width: 90%;
     text-align: left;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     vertical-align: top;
     min-height: 100px;
 
-    @media (max-width: 800px) {
+    @media (min-width: 540px) {
         width: 45%;
     }
 
-    @media (max-width: 540px) {
-        width: 90%;
+    @media (min-width: 800px) {
+        width: 30%;
+        margin-bottom: 3rem;
     }
 }
 
