@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>JavaScript Code Styling (JSCS) @johan_forsman</title>
+  <meta name="description" content="When many developers are working in the same JavaScript-project, keeping the code clean and maintainable can sometimes be a hassle. Everybody have their own ...">
+  <meta name="author" content="Johan Forsman">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://johanhforsman.com/blog/setting-up-jscs">
+  <link rel="alternate" type="application/rss+xml" title="Johan Forsman" href="http://johanhforsman.com/feed.xml">
+
+  
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="JavaScript Code Styling (JSCS)">
+  <meta property="og:description" content="When many developers are working in the same JavaScript-project, keeping the code clean and maintainable can sometimes be a hassle. Everybody have their own ...">
+  <meta property="og:url" content="http://johanhforsman.com/blog/setting-up-jscs">
+  <meta property="og:site_name" content="Johan Forsman">
+  <meta property="og:image" content="http://johanhforsman.com/assets/johan.png">
+  <meta property="og:publisher" content="https://www.facebook.com/johanhforsman">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@johan_forsman">
+  <meta name="twitter:title" content="JavaScript Code Styling (JSCS)">
+  <meta name="twitter:description" content="When many developers are working in the same JavaScript-project, keeping the code clean and maintainable can sometimes be a hassle. Everybody have their own ...">
+  <meta name="twitter:image" content="http://johanhforsman.com/assets/johan.png">
+  
+
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:900|Source+Code+Pro:400,600' rel='stylesheet' type='text/css'>
+</head>
+
+
+  <body>
+    <main class="main-wrapper">
+        <input id="right-menu__chkbox" type="checkbox">
+        <nav class="nav-top">
+    <label class="nav-top__menu-link">
+        <p class="right-menu__open-text">Menu</p>
+        <p class="right-menu__close-text">Close</p>
+        <div id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    </label>
+    <label id="menu_link" for="right-menu__chkbox">
+        <p class="right-menu__open-text">Menu</p>
+        <p class="right-menu__close-text">Close</p>
+        <div id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    </label>
+</nav>
+
+
+        <aside class="right-menu">
+            <a href="/">
+                <img class="right-menu__avatar" src="../assets/face.jpg" alt="Me">
+            </a>
+            <p class="right-menu__text">
+                Hi, I'm Johan. A few years ago, I discovered how fun it is to design and develop products for the web. And here I am now.
+            </p>
+            <ul class="right-menu__list">
+                <li class="right-menu__list-item"><a href="/about">More about me</a></li>
+                <li class="right-menu__list-item"><a href="/books">My bookshelf</a></li>
+                <li class="right-menu__list-item"><a href="/blog">Blog</a></li>
+                <li class="right-menu__list-item"><a href="/tdbid">TDBID</a></li>
+                <li class="right-menu__list-item"><a href="/work">Work</a></li>
+            </ul>
+        </aside>
+
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="post__header">
+        <h1 class="post__title" itemprop="name headline">JavaScript Code Styling (JSCS)</h1>
+        <p class="post__meta">
+            <time datetime="2016-05-01T22:43:19+02:00" itemprop="datePublished">
+                May 1, 2016
+            </time>
+            
+        </p>
+    </header>
+
+    <div class="post__content" itemprop="articleBody">
+        <p>When many developers are working in the same JavaScript-project, keeping the code clean and maintainable can sometimes be a hassle. Everybody have their own style and liking of how to write JS-code, what editor to use and may or may not use linters.</p>
+
+<p>That why it’s great to set up team rules of how to write the JS-code. And, for them to be used, they need to be automated. It cannot only and up on the company wiki that no one reads. We new automation. To get help with all these rules and make them correct the code, We’re using JavaScript Code Styling.
+I’ve used this in several projects with a lot of success. Opening up the project and all files look the same no matter how many developers are working on the project is great.</p>
+
+<p>An example of what JSCS can do for your code:</p>
+
+<p><strong>Before:</strong></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">itemsArray</span><span class="o">=</span> <span class="p">[{</span><span class="na">name</span><span class="p">:</span><span class="dl">"</span><span class="s2">Johan</span><span class="dl">"</span><span class="p">,</span><span class="na">age</span><span class="p">:</span><span class="dl">"</span><span class="s2">34</span><span class="dl">"</span> <span class="p">},{</span><span class="na">name</span><span class="p">:</span><span class="dl">'</span><span class="s1">Henrik</span><span class="dl">'</span><span class="p">,</span>  <span class="na">age</span><span class="p">:</span><span class="dl">'</span><span class="s1">42</span><span class="dl">'</span><span class="p">}];</span>
+<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">itemsArray</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span> <span class="nx">itemsArray</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">totalAge</span><span class="o">+=</span><span class="nx">itemsArray</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">age</span><span class="o">+</span><span class="nx">ageFactor</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><strong>After:</strong></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">itemsArray</span> <span class="o">=</span> <span class="p">[{</span><span class="na">name</span><span class="p">:</span><span class="dl">'</span><span class="s1">Johan</span><span class="dl">'</span><span class="p">,</span> <span class="na">age</span><span class="p">:</span><span class="dl">'</span><span class="s1">34</span><span class="dl">'</span><span class="p">},</span> <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Henrik</span><span class="dl">'</span><span class="p">,</span> <span class="na">age</span><span class="p">:</span><span class="dl">'</span><span class="s1">42</span><span class="dl">'</span><span class="p">}];</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">itemsArray</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">itemsArray</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">totalAge</span> <span class="o">+=</span> <span class="nx">itemsArray</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">age</span> <span class="o">+</span> <span class="nx">ageFactor</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>What main functionality of JSCS is that it creates spacing at the right places. More breathing room in the code, and the readability will be enhanced.</p>
+
+<h3 id="get-it-on-your-machine">Get it on your machine</h3>
+<p>So, let’s go though the steps on how to install JSCS on your machine. First we need to install it globally. JSCS is an npm package and can be installed via the terminal (<a href="http://npmjs.com">npmjs.com</a>):</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">-g</span> jscs
+</code></pre></div></div>
+
+<p>Now you can start using it on your files.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jscs path/to/the/file.js
+</code></pre></div></div>
+
+<p>Checking all files in the terminal will be very inefficent though. A better way is to install plugins in your IDE that automatically will import your rules and immediately apply them and check your code. And even better, if there is a shortcommand that will change the file according to your rules.</p>
+
+<p>I personally use Sublime Text 3 and these are the packages that needs to be installed (via package control):</p>
+
+<ul>
+  <li>SublimeLinter</li>
+  <li>SublimeLinter-jscs</li>
+  <li>JSCS-Formatter</li>
+</ul>
+
+<p><strong>JSCS-Formatter</strong> is pure awesome sauce. With a short command (or on save) it applies all your rules and changes the file, if necessary. I personally only use the short command. Otherwise Sublime will throw an error each time I save in a project without a <code class="language-plaintext highlighter-rouge">.jscsrc</code> file.</p>
+
+<h3 id="lets-set-the-rules">Let’s set the rules!</h3>
+<p>JSCS support tons of rules. And you can specify in greater details how you want your and your teams code to be written. If you don’t want to do that, you can choose between any of the presets that exist. For ex:</p>
+
+<ul>
+  <li>Airbnb</li>
+  <li>Grunt</li>
+  <li>jQuery</li>
+  <li>Google</li>
+  <li>Wordpress</li>
+</ul>
+
+<p>Create a file and name it <code class="language-plaintext highlighter-rouge">.jscsrc</code> and put it in the root folder of the project. This is our configuration file where we’re going to set all the rules.</p>
+
+<p>Down below is the one I use. Head over to <a href="http://jscs.info/rules">http://jscs.info/rules</a> for an explanation of what each and one of them. Luckily, many of them are self-explanatory.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nl">"disallowSpacesInsideObjectBrackets"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"disallowTrailingComma"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"disallowSpaceAfterObjectKeys"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"disallowEmptyBlocks"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"disallowNewlineBeforeBlockStatements"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"disallowMixedSpacesAndTabs"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"disallowMultipleLineBreaks"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"disallowMultipleLineStrings"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"disallowMultipleSpaces"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"disallowTrailingWhitespace"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"disallowSpacesInsideParentheses"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"disallowSpacesInNamedFunctionExpression"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"beforeOpeningRoundBrace"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"disallowSpacesInFunctionExpression"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"beforeOpeningRoundBrace"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"disallowSpacesInAnonymousFunctionExpression"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"beforeOpeningRoundBrace"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"disallowSpacesInFunctionDeclaration"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"beforeOpeningRoundBrace"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"requireSpacesInFunctionDeclaration"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"beforeOpeningCurlyBrace"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"disallowSpaceAfterPrefixUnaryOperators"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"requireBlocksOnNewline"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"requireCurlyBraces"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"if"</span><span class="p">,</span><span class="w"> </span><span class="s2">"else"</span><span class="p">,</span><span class="w"> </span><span class="s2">"for"</span><span class="p">,</span><span class="w"> </span><span class="s2">"while"</span><span class="p">,</span><span class="w"> </span><span class="s2">"do"</span><span class="p">,</span><span class="w"> </span><span class="s2">"try"</span><span class="p">,</span><span class="w"> </span><span class="s2">"catch"</span><span class="p">],</span><span class="w">
+    </span><span class="nl">"requireSpaceAfterKeywords"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"if"</span><span class="p">,</span><span class="w"> </span><span class="s2">"else"</span><span class="p">,</span><span class="w"> </span><span class="s2">"for"</span><span class="p">,</span><span class="w"> </span><span class="s2">"while"</span><span class="p">,</span><span class="w"> </span><span class="s2">"do"</span><span class="p">,</span><span class="w"> </span><span class="s2">"switch"</span><span class="p">,</span><span class="w"> </span><span class="s2">"return"</span><span class="p">,</span><span class="w"> </span><span class="s2">"try"</span><span class="p">,</span><span class="w"> </span><span class="s2">"catch"</span><span class="p">],</span><span class="w">
+    </span><span class="nl">"requireSpaceBeforeBinaryOperators"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"requireSpaceAfterBinaryOperators"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"requireSpaceBeforeKeywords"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"if"</span><span class="p">,</span><span class="w"> </span><span class="s2">"else"</span><span class="p">,</span><span class="w"> </span><span class="s2">"for"</span><span class="p">,</span><span class="w"> </span><span class="s2">"while"</span><span class="p">,</span><span class="w"> </span><span class="s2">"do"</span><span class="p">,</span><span class="w"> </span><span class="s2">"switch"</span><span class="p">,</span><span class="w"> </span><span class="s2">"return"</span><span class="p">,</span><span class="w"> </span><span class="s2">"try"</span><span class="p">,</span><span class="w"> </span><span class="s2">"catch"</span><span class="p">],</span><span class="w">
+    </span><span class="nl">"requireSpaceBeforeBlockStatements"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"requireSpacesInForStatement"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"requireSpacesInFunctionExpression"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"beforeOpeningCurlyBrace"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"requireSpaceBetweenArguments"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"requirePaddingNewLinesAfterUseStrict"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"requireSpaceBeforeObjectValues"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"requireSpacesInConditionalExpression"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"requireParenthesesAroundIIFE"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"validateIndentation"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"validateParameterSeparator"</span><span class="p">:</span><span class="w"> </span><span class="s2">", "</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"requireDotNotation"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+
+    </span><span class="nl">"requirePaddingNewLinesBeforeLineComments"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"allExcept"</span><span class="p">:</span><span class="w"> </span><span class="s2">"firstAfterCurly"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"requirePaddingNewLineAfterVariableDeclaration"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"validateQuoteMarks"</span><span class="p">:</span><span class="w"> </span><span class="s2">"'"</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+
+    </div>
+
+</article>
+
+
+        <script src="http://johanhforsman.com/assets/scripts/fastclick.js"></script>
+<script src="http://johanhforsman.com/assets/scripts/main-script.js"></script>
+<script src="http://johanhforsman.com/assets/scripts/hide-show-nav.js"></script>
+
+<footer>
+  <p>Let's be friends! Come say hi <a href="https://twitter.com/johan_forsman">@johan_forsman</a> or send me an <a href="mailto:johan@johanhforsman.com">email</a>.</p>
+  <div class="bottom-footer">2012<script>new Date().getFullYear()>2012&&document.write("-"+new Date().getFullYear());</script>, Crafted with <span id="heart"><svg viewBox="0 0 32 29.6"><path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+    c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/></svg></span></div>
+</footer>
+
+    </main>
+
+  </body>
+
+</html>

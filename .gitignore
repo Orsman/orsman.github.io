@@ -1,4 +1,4 @@
-_site
 .sass-cache
 .DS_store
 node_modules
+.jekyll-cache

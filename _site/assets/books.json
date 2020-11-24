@@ -1,0 +1,172 @@
+{
+  "books": [
+    {
+      "title": "The Sell",
+      "author": "Fredrik Eklund",
+      "img": "the_sell.jpg",
+      "review": "Started with nothing. Did a two-week course, and now he's the number one broker in Manhattan"
+    },
+    {
+      "title": "Diet cults",
+      "author": "Matt Fitzgerald",
+      "img": "diet-cults.jpg",
+      "review": "Eat whatever makes you feel good. Try to eat as little sugar and salt as possible. Many of the modern diets are just marketing campaigns."
+    },
+    {
+      "title": "Löparens Hjärta",
+      "author": "Marcus Torgeby",
+      "img": "loparens-hjarta.jpg",
+      "review": "He wanted to think of what to do in life. So he went inte o the forrest for 4 years. And realised what he wanted to do."
+    },
+    {
+      "title": "Focus",
+      "author": "Daniel Goleman",
+      "img": "focus.jpg",
+      "review": "Start being more aware of your self and your surrounding will enhance your life."
+    },
+    {
+      "title": "Immediate Action",
+      "author": "Andy McNab",
+      "img": "immediate-action.jpg",
+      "review": "180 people started the tryouts for SAS. 8 made it. The only thing the recruiters are looking for is who has the heart to continue when you’re being pushed beyond limits."
+    },
+    {
+      "title": "First",
+      "author": "Rich Froning",
+      "img": "first.jpg",
+      "review": "Your physical strength will only take so far. Your mind will take you further. Froning’s biggest asset is his ability to push through short term pain to achieve long term success."
+    },
+    {
+      "title": "Tommyland",
+      "author": "Tommy Lee",
+      "img": "tommyland.jpg",
+      "review": "I should stop reading rock-biographies. They are all the same."
+    },
+    {
+      "title": "Driven From Within",
+      "author": "Michael Jordan",
+      "img": "driven-from-within.jpg",
+      "review": "Michael worked very hard at excelling in everything he did. His attitude is 'Come on man, you might be sick, but you can still play'."
+    },
+    {
+      "title": "Who Moved My Cheese?",
+      "author": "Dr. Spencer Johnson",
+      "img": "who-moved-my-cheese.jpg",
+      "review": "The world is always changing. Never let fear of change decide how you are going to live."
+    },
+    {
+      "title": "How to win friends and influence people",
+      "author": "Dale Carnegie",
+      "img": "how-to-win-friends-and-influence-people.jpg",
+      "review": "The book that started the whole “self-help”-journey for me. The number one resource on becoming social savvy."
+    },
+    {
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "img": "the-alchemist.jpg",
+      "review": "About a boy who is determined to find and follow his purpose in life. Should be read at least two times. The underlining messages will sink in better the second time."
+    },
+    {
+      "title": "I am Zlatan",
+      "author": "Zlatan Ibrahimovic",
+      "img": "i-am-zlatan.jpg",
+      "review": "Confidence and narcissism gives you the persistence to go for what you want and not stop until you achieve it."
+    },
+    {
+      "title": "Mastery",
+      "author": "George Leonard",
+      "img": "mastery.jpg",
+      "review": "A story about the long term process. “80 % of your training/life is spent on a plateau”. It also explains why people fail with the long run."
+    },
+    {
+      "title": "4 Hour Work Week",
+      "author": "Timothy Ferriss",
+      "img": "the-4-hour-work-week.jpg",
+      "review": "Motivated me to let go of what I had and start work for what I want. Tim Ferriss is one of the godfathers of the “digital nomad”-lifestyle."
+    },
+    {
+      "title": "Between A Rock And A Hard Place (127 hours)",
+      "author": "Aron Rolston",
+      "img": "between-a-rock-and-a-hard-place.jpg",
+      "review": "Eyeopening and fascinating on what our body can do to survive. We can push ourselves beyond limits we never new existed."
+    },
+    {
+      "title": "The Inner Game Of Tennis",
+      "author": "W. Timothy Gallwey",
+      "img": "the-inner-game-of-tennis.jpg",
+      "review": "The relationship between ego and body illustrated as a tennis match. Brilliant. Even though it’s related to sports the message can be applied to anything."
+    },
+    {
+      "title": "The Dip",
+      "author": "Seth Godin",
+      "img": "the-dip.jpg",
+      "review": "Short book with mind-blowing content. Being number one will give you serious benefits. This book is a must read."
+    },
+    {
+      "title": "Outliers",
+      "author": "Malcolm Gladwell",
+      "img": "outliers.jpg",
+      "review": "“Hard work beats talent when talent doesn’t work hard”. Really. This is it. Work Hard."
+    },
+    {
+      "title": "No Limits",
+      "author": "Alan Abrahamsson",
+      "img": "no-limits.jpg",
+      "review": "The story of when Michael Phelps won 8 gold medals in Beijing 2008. Exciting and inspirational. In the mind of an elite athlete."
+    },
+    {
+      "title": "No Easy Day",
+      "author": "Mark Owen",
+      "img": "no-easy-day.jpg",
+      "review": "Being in the special forces is all about learning how to be comfortable with being uncomfortable. Exciting even though I knew how it would end."
+    },
+    {
+      "title": "The Art of Non-Conformity",
+      "author": "Chris Guillebeau",
+      "img": "the-art-of-non-conformity.jpg",
+      "review": ""
+    },
+    {
+      "title": "Scar Tissue",
+      "author": "Anthony Keidis",
+      "img": "scar-tissue.jpg",
+      "review": "Constant drug abuse in the first half of the book. The later half was a mix of in-and-out of rehab, song writing and girls. Too much shooting-up-coke-and-herion-by-him-self-in-a-hotel-room and too little crazy adventures with his band members."
+    },
+    {
+      "title": "The 7 Habits of Highly Effective People",
+      "author": "Steven R. Covey",
+      "img": "the-7-habits.jpg",
+      "review": ""
+    },
+    {
+      "title": "Influence",
+      "author": "Robert B. Cialdini",
+      "img": "influence.jpg",
+      "review": "If you say/do something with enough authority, people will believe it. The more scarce something are the more valuable it is to us."
+    },
+    {
+      "title": "The Viking Manifesto",
+      "author": "Steve Strid & Claes Andréassen",
+      "img": "the-viking-manifesto.jpg",
+      "review": "Forget marketing. Build the best product or service you can do, and the marketing will handle itself. And the better the story the less you have to spend on buying media."
+    },
+    {
+      "title": "Total Recall",
+      "author": "Arnold Schwarzenegger",
+      "img": "total-recall.jpg",
+      "review": "This dude has some serious work ethic. Three careers. Became world-class in all of them. One of the best biographies I’ve read."
+    },
+    {
+      "title": "The Dirt",
+      "author": "Neil Strauss",
+      "img": "the-dirt.jpg",
+      "review": "Entertaining biography about one of the biggest rock band in the 80s. Packed with crazy stories. Great read on 'how to learn to do whatever comes into your mind and not care about the consequences'."
+    },
+    {
+      "title": "The Social Animal",
+      "author": "David Brooks",
+      "img": "the-social-animal.jpg",
+      "review": "Cool idea. A fictional story about how two people, from different backgrounds, got successful. It shows that a lot of the things we do and choices we make are made unconsciously."
+    }
+  ]
+}
