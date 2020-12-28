@@ -12,7 +12,7 @@ $base-line-height:      1.5;
 $content-width:         780px;
 $spacing-unit:          30px;
 
-$text-color:            #44484a;
+$text-color:            #2f2d2d;
 $brand-color:           #3F51B5;
 $code-background:       #f7f7f7;
 
@@ -24,23 +24,13 @@ $on-desktop:            600px;
 
 $menu-transition:       transform 500ms ease;
 
-// $on-palm:            600px;
-// $on-laptop:          800px;
 
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+  @media screen and (max-width: $device) {
+    @content;
+  }
 }
 
-// Import partials from `sass_dir` (defaults to `_sass`)
 @import
     "base",
     "typography",

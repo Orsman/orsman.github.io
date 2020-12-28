@@ -1,35 +1,35 @@
 
 .page {
-    padding-bottom: 2rem;
+  padding-bottom: 2rem;
 
-    @media (min-width: 700px) {
-        padding-bottom: 4rem;
-    }
+  @media (min-width: 700px) {
+    padding-bottom: 4rem;
+  }
 }
 
 .post {
-    margin: 0 auto;
-    padding: 60px 1.5rem;
-    max-width: $content-width;
-    transition: $menu-transition;
+  margin: 0 auto;
+  padding: 60px 1.5rem;
+  max-width: $content-width;
+  transition: $menu-transition;
 
-    &--full-width {
-      max-width: 1080px;
-    }
+  &--full-width {
+    max-width: 1080px;
+  }
 
-    @media (min-width: $on-desktop) {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-    }
+  @media (min-width: $on-desktop) {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
 }
 
 .post__header {
-    margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .post__meta {
-    color: #808080;
-    font-style: italic;
+  color: #808080;
+  font-style: italic;
 }
 
 .post__content a {
@@ -50,12 +50,12 @@
 }
 
 .post__content li {
-    list-style-type: none;
+  list-style-type: none;
 
-    &:before {
-        content: '+';
-        padding-right: .75rem;
-    }
+  &:before {
+    content: '+';
+    padding-right: .75rem;
+  }
 }
 
 .post > img,
