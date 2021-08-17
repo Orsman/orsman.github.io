@@ -1,10 +1,9 @@
 ---
 layout: page
 title:  "My experience"
+published: false
 ---
 <p>During summer of 2012 I was introduced to web development and saw the connection between becoming really good at front-end development and fulfilling my dream of building products. I started to learn everything about development, and spent all my free time studying and coding. Later that year I decided to quit my part time job and go full time freelancing. Big jump since I really didn’t have any reference cases. But I will not let fear of failing stop me from achieving what I want.</p>
-<p>What drives me on a daily basis is that everything is on the internet and it’s all a chase of customers attention. And the product that wins is the one that has the stickiness-factor, is easy to use and fulfil a human need.</p>
-<p>The last 2 years I’ve been involved in a tech startup here in Stockholm. When I started, there were no frontend built, which forced me to learn product development. During that time I had little to no experience of JavaScript and AngularJS development, but I was forced to learn. And over time I got better to the point where I’m now very comfortable in Javascript and especially AngularJS. Working in a team this small I’ve also gained experience in user testing, workflow management (git, gulp), sales and product development in general.</p>
 
 <ul class="work-experience">
   <li>

@@ -1,12 +1,13 @@
 ---
 layout: page
 title:  "TDBID"
+published: false
 ---
-In 2008, (as I mentioned [here](/about "About me")), I wrote down a list of everything I wanted to do in my life. Everything. No matter how unrealistic it felt at the time. I had to figure out what I wanted to do, achieve and experience in life.
+In 2008 I wrote down a list of everything I wanted to do in my life. No matter how unrealistic it felt at the time. I had to figure out what I wanted to do, achieve and experience in life.
 
 Since then, this list have guided me. I look at it often. Just to remind myself where I'm going and what's important. And if I'm currently doing something that's not on the list, or, getting me close to achieving one, something has to change.
 
-One important thing about this list is that it's not about possession, nor "ticking things of a list". It's about experience and evolving. The fun part should be the process of getting there!
+One important thing about this list is that it's not about possession, or "ticking things of a list". It's about experience and evolving. The fun part should be the process of getting there!
 
 > The journey is the reward.
 

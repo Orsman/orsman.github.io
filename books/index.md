@@ -1,6 +1,7 @@
 ---
 layout: default
 title:  "My bookshelf"
+published: false
 ---
 
 <article class="post post--full-width">
